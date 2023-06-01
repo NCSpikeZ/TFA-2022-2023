@@ -1,7 +1,7 @@
 @import 'utils/variables';
 @import 'components/type';
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.cdnfonts.com/css/gotham-rounded');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
 :root{ 
   --color-bg: #FFF8F8;
@@ -123,8 +123,8 @@ list-style: none;
   white-space: pre-line;
 }
 
-.gotham{
-  font-family: 'Gotham Rounded', sans-serif;;
+.merriweather{
+  font-family: 'Merriweather', serif;
 }
 
 .grey{
@@ -137,6 +137,10 @@ list-style: none;
 
 .blue{
   color: var(--color-text-offset);
+}
+
+.white{
+color: var(--color-bg);
 }
 
 .citation{
@@ -152,8 +156,17 @@ list-style: none;
   max-width: 60ch;
 }
 
+.txt-italic{
+  font-style: italic;
+  font-weight: lighter;
+}
+
 .txt-bold{
   font-weight: bold;
+}
+
+.txt-underline{
+  text-decoration: underline;
 }
 
 .centered{
@@ -176,6 +189,14 @@ list-style: none;
   margin-top: 18px;
 }
 
+.margin-bottom1x{
+  margin-bottom: 18px;
+}
+
+.margin-bottom3x{
+  margin-bottom: 54px;
+}
+
 //Images
 
 .imageintro--container{
@@ -184,6 +205,13 @@ list-style: none;
   display: flex;
   justify-content: center;
   margin-top: 36px;
+}
+
+.araph--logo{
+  width: 300px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 //Swipe
@@ -205,8 +233,8 @@ list-style: none;
 		background-color: var(--color-bg-offset);
 		border-radius: 50%;
 		opacity: 1;
-		animation: circle 2s infinite;
-		-webkit-animation: circle 2s infinite;
+		animation: circle 1.2s infinite;
+		-webkit-animation: circle 1.2s infinite;
 	}
 
 @keyframes circle {
@@ -221,4 +249,25 @@ list-style: none;
 		opacity: 0;
 		top: 60px;
 	}
+}
+
+.defilement{
+  background-color: #7A1001;
+  overflow: hidden;
+  position: relative;
+}
+
+.defilement-text {
+  white-space: nowrap;
+  animation: scrollText 6s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes scrollText {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-350%);
+  }
 }

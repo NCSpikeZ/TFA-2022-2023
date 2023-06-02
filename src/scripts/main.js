@@ -103,3 +103,5 @@ function prev(){
 let year = new Date().getFullYear();
 let date = document.querySelector("#date");
 date.innerHTML = "©SpikeZ"+ String(year);
+
+;

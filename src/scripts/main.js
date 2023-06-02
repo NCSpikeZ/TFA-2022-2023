@@ -1,4 +1,26 @@
 "use strict";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+function reveal() {
+var reveals = document.querySelectorAll(".reveal");
+
+for (var i = 0; i < reveals.length; i++) {
+  var windowHeight = window.innerHeight;
+  var elementTop = reveals[i].getBoundingClientRect().top;
+  var elementVisible = 150;
+
+  if (elementTop < windowHeight - elementVisible) {
+    reveals[i].classList.add("active");
+  } else {
+    reveals[i].classList.remove("active");
+  }
+}
+}
+
+window.addEventListener("scroll", reveal);
 
 /* Burger */
 document.addEventListener('DOMContentLoaded', initNav);
@@ -28,7 +50,7 @@ function updateCounter() {
   counterElement.innerText = currentCount.toLocaleString();
 
   if (currentCount < targetCount) {
-    currentCount += 1000;
+    currentCount += 800;
     setTimeout(updateCounter, 1);
   } else {
     currentCount = targetCount;

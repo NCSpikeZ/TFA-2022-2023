@@ -83,12 +83,15 @@ document.addEventListener("keydown", function(e){
     }
 });
 
-//Hammer
+//Hammer (swipe sur le slider)
 const slider = document.querySelector(".slider"),
     hammerSlider = new Hammer(slider);
 
 hammerSlider.on("swipeleft", next);
 hammerSlider.on("swiperight", prev);
+
+
+//Slider
 
 function next (){
     let elShow = document.querySelector(".slider__el--show"),
@@ -126,4 +129,13 @@ let year = new Date().getFullYear();
 let date = document.querySelector("#date");
 date.innerHTML = "©SpikeZ"+ String(year);
 
-;
+// bouton déroulant
+window.onload = function() {
+  var button = document.getElementById("toggle-button");
+  button.addEventListener("click", toggleContent);
+};
+
+function toggleContent() {
+  var content = document.getElementById("content");
+  content.classList.toggle("active");
+}

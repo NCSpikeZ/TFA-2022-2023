@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <title>Présentation | A11yconnect</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <title>Présentation | A11yconnect</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
   <!-- Open Graph meta pour Facebook -->
   <meta property="og:title" content="Présentation | A11yconnect">
   <meta property="og:url" content="http://www.nicolascoopman.be/projets/tfa/index.html">
@@ -33,6 +34,7 @@
   <script src="scripts/hammer.min.js" defer></script>
   <script src="scripts/main.js" defer></script>
 </head>
+
 <body class="lora backgroundcolor-white color-black">
   <header class="header--container backgroundcolor-white position-fixed">
     <nav class="main-nav align-center space-between display-flex">
@@ -41,25 +43,30 @@
           <div class="line display-block line--2"></div>
           <div class="line display-block line--3"></div>
       </div>
-      <ul class="nav-links flex-column align-center display-flex position-fixed backgroundcolor-white">
+      <ul class="nav-links flex-column align-center display-flex position-fixed backgroundcolor-white merriweather txt gridcolumn1">
         <li class="menu-list_el"><a class="menu-itemactive display-block underline centered" href="index.html">Présentation</a></li>
         <li class="menu-list_el"><a class="menu-item opacity display-block underline centered" href="interviews.html">Interviews</a></li>
-        <li class="menu-list_el"><a class="menu-item opacity display-block underline centered" href="https://docs.google.com/document/d/10mVxYDuZsArRD1Pr_J1tL4s5tSxVnFzKBI49dZQ9nbE/edit?usp=sharing">Google Doc</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <h1 class="first-title margin-bottom1x margin-leftright1x merriweather">Inclusion numérique</h1>
-    <h2 class="second-title margin-leftright1x merriweather color-grey">Une révolution
-d'opportunité</h2>
-    <div class="imageintro--container margin-top2x overflow-hidden display-flex">
+  <main class="main--grid">
+    <section>
+      <h1 class="first-title margin-bottom1x margin-leftright1x merriweather">Inclusion numérique</h1>
+      <h2 class="second-title margin-leftright1x merriweather color-grey">Une révolution
+  d'opportunité</h2>
+      <div class="hidden green-button">
+        <p class="txt-36 txt-bold">On y va !</p>  
+      </div>
+    </section>
+    <div class="imageintro--container margin-left margin-top2x overflow-hidden display-flex grid-row2">
         <img src="assets/images/imageintro.png" alt="Plusieurs personnages se tenant l'air heureux dont plusieurs d'entres eux atteints de handicaps" srcset="assets/images/imageintro@2x.png 2x">
     </div>
+    <div class="hidden-desktop">
     <p class="txt centered margin-top3x">Le web devrait être accessible à<span class="txt-bold"> tous</span></p>
     <p class="second-title centered txt-bold">Swippez !</p>
     <div class="swipe position-relative"></div>
     <section class="margin-leftright1x">
-        <h2 class="second-title merriweather citation centered reveal opacity-0 opacity-0">«J'espère <span class="color-red txt-bold">sensibiliser</span> les futurs webdesigners&nbsp;à&nbsp; l'importance de concevoir des sites web&nbsp;accessibles&nbsp;à tous &nbsp;</h2>
+        <h2 class="second-title merriweather citation centered reveal opacity-0">«J'espère <span class="color-red txt-bold">sensibiliser</span> les futurs webdesigners&nbsp;à&nbsp; l'importance de concevoir des sites web&nbsp;accessibles&nbsp;à tous &nbsp;</h2>
         <h2 class="second-title centered merriweather color-blue">Start !</h2>
         <p class="txt margin-top2x">Dans le cadre de mon TFA, j’ai décidé d’aborder le thème de l'accessibilité du web pour les personnes atteintes de handicaps. Pour moi, il est primordial que le web soit accessible à tous, quelles que soient leurs capacités.</p>
         <h2 class="second-title merriweather color-blue centered margin-top3x">Accessible ?</h2>
@@ -108,7 +115,7 @@ d'opportunité</h2>
         <p class="txt margin-top2x">Cette fonctionnalité permettra aux utilisateurs de naviguer sur le site à l'aide de la touche TAB plutôt qu'à la souris et permettra aussi l'accès à ses fonctions principales par le biais d'access key.</p>
         <p class="txt margin-top2x enlarge-text centered border-solid padding-button">Texte agrandi :</p>
         <p class="txt margin-top2x">Ce module permettrait aux utilisateurs de modifier la taille du texte sur le site, ce qui serait particulièrement utile pour les personnes atteintes de troubles visuels ou de dyslexie.</p>
-        <div class="shine border-solid margin-leftright1x margin-top2x centered padding-button">Navigation clair et organisée :</div>
+        <div class="position-relative border-solid margin-leftright1x margin-top2x centered padding-button">Navigation clair et organisée :</div>
         <p class="txt margin-top2x">Le site devrait également être organisé de manière claire et logique afin de faciliter la navigation pour tous les utilisateurs, y compris ceux en situation de handicap moteur. Les techniques de hiérarchisation du contenu et d'architecture d'information pourraient être utilisées pour faciliter la navigation.</p>
         <p class="txt margin-top2x">Il devra aussi rester lisible même sans Javascript ni Flash.</p>
 
@@ -181,6 +188,7 @@ d'opportunité</h2>
       <p class="txt margin-top2x">La navigation sur le web doit être accessible à tous et j'espère que ce site internet contribuera à une meilleure inclusion de ces personnes en ligne</p>
       <p class="txt margin-top2x margin-bottom3x">En utilisant les outils et fonctionnalités que j'ai intégrés, j'espère que les utilisateurs seront en mesure de comprendre les défis auxquels sont confrontées les porteurs de handicaps et comment ils peuvent être surmontés grâce à des techniques appropriées de hiérarchisation et d'organisation du contenu.</p>
     </section>
+  </div>
   </main>
   <footer class="footer centered flex-column align-center display-flex">
     <small id="date"></small>

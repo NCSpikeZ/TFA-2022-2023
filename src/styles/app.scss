@@ -11,6 +11,7 @@
   --color-text-offset: #002D72;
   --color-text-third: #525252;
   --color-text-fourth: #72002D;
+  --color-bg-third: #2D7200;
 }
 
 * {
@@ -83,6 +84,10 @@
   padding: 10px;
 }
 
+.hidden{
+  display: hidden;
+}
+
 /*Burger-menu*/
 
 .main-nav {
@@ -119,6 +124,14 @@
 .nav-links a {
   width: 100px;
 }
+
+.menu-itemactive{
+  text-decoration: underline;
+} 
+
+.menu-itemactive:hover{
+  text-decoration: overline;
+} 
 
 .burger {
   padding: 0.5rem;
@@ -266,6 +279,7 @@ color: var(--color-bg);
 /*Images*/
 
 .imageintro--container{
+  height: 90vw  ;
   width: 100vw;
   justify-content: center;
 }
@@ -359,3 +373,87 @@ color: var(--color-bg);
 .linkList__el--active {
   border-bottom: 2px solid var(--c-third);
 }
+
+//Style desktop
+
+@media (min-width: 1025px) {
+
+  .margin-leftright1x{
+      margin-left: initial;
+      margin-right: initial;
+  }
+  
+  .main--grid{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 24px;
+    margin-left: 120px;
+    margin-right: 120px;
+    max-width: 1980px;
+  }
+  
+  .first-title{
+    font-size: 96px;
+    line-height: 106px;
+    grid-column: 1 / 2;
+    margin-top: 240px;
+  }
+  
+  .second-title{
+    font-size: 48px;
+  }
+  
+  .imageintro--container{
+    margin-left: 120px;
+    width: 1047px;
+    height: 600px;
+    grid-column: 2;
+    margin-top: 240px;
+  }
+  
+  .txt{
+      font-size: 24px;
+  }
+  
+  .txt-36{
+    font-size: 36px;
+  }
+  
+  .burger{
+    display: none;
+  }
+  
+  .nav-links {
+    position: initial;
+    flex-direction:row; 
+    box-shadow: initial;
+    justify-content: flex-end;
+  }
+  
+  .nav-links a{
+    display: initial;
+  }
+  
+  .nav-links li{
+    margin-right: 48px;
+  }
+  
+  .green-button{
+      margin-top: 72px;
+      width: 250px;
+      height: 70px;
+      background-color: var(--color-bg-third);
+      display: flex;
+      border-radius: 6%;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-bg);
+      font-weight: bold;
+  }
+
+  .hidden-desktop{
+    display: none;
+  }
+  }
+  

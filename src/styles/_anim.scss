@@ -169,10 +169,6 @@
     transition: 2s all ease;
   }
 
-  .araph--logo.reveal.active{
-    transform: rotate(-90deg);
-  }
-
   .reveal.active{
     transform: translateY(0);
     opacity: 1;
@@ -246,7 +242,15 @@
           transform: translateX(-170%);
       }
     }
+
+    .menu-container {
+      width: 650px;
+    }
     
+    .araph--logo.reveal.active{
+      transform: rotate(-90deg);
+    }
+  
 
     }
     

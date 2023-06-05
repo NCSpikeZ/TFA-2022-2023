@@ -290,12 +290,8 @@ color: var(--color-bg);
   margin-right: auto;
 }
 
-.img--idee{
+.img-tel{
   width: 350px;
-}
-
-.img--interviews{
-  width: 580px
 }
 
 /* Slider */
@@ -562,6 +558,10 @@ color: var(--color-bg);
     grid-column: 2 / 5;
   }
 
+  .grid-column2-6{
+    grid-column: 2 / 6;
+  }
+
   .grid-column3-5{
     grid-column: 3 / 5;
   }
@@ -597,6 +597,13 @@ color: var(--color-bg);
   .slider{
     width: 50%;
   }
-  
+
+  .img--idee{
+    grid-row: 3 / 9;
+  }
+
+  .txt-lineheight{
+    line-height: 30px;
+  }
   }
   

@@ -70,6 +70,20 @@ function updateCounterOnScroll() {
 window.addEventListener('scroll', updateCounterOnScroll);
 }
 
+
+//fleche 
+
+var animation = bodymovin.loadAnimation({
+  container: document.querySelector('.anim'),
+  renderer: 'svg',
+  autoplay: true,
+  path: 'https://assets3.lottiefiles.com/packages/lf20_muyl0kpg.json'
+})
+
+animation.setSpeed(0.65);
+
+
+
 //Touches clavier
 document.addEventListener("keydown", function(e){
     if(e.code == "ArrowLeft"){
@@ -146,12 +160,3 @@ function toggleContenu() {
   toggleContenu.classList.toggle('active');
   this.querySelector('.arrow').classList.toggle('rotate-down');
 }
-
-var animation = bodymovin.loadAnimation({
-  container: document.querySelector('.anim'),
-  renderer: 'svg',
-  autoplay: true,
-  path: 'https://assets3.lottiefiles.com/packages/lf20_muyl0kpg.json'
-})
-
-animation.setSpeed(0.65);

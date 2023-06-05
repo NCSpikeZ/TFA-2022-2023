@@ -31,6 +31,7 @@
   <meta property="og:site_name" content="nicolascoopman.be">
   
   <link rel="stylesheet" href="styles/app.css">
+  <script src="scripts/lottie.js"></script>
   <script src="scripts/hammer.min.js" defer></script>
   <script src="scripts/main.js" defer></script>
 </head>
@@ -50,35 +51,36 @@
     </nav>
   </header>
   <main class="main--grid">
-    <section>
+    <section class="intro--section">
       <h1 class="first-title margin-bottom1x margin-leftright1x merriweather">Inclusion numérique</h1>
       <h2 class="second-title margin-leftright1x merriweather color-grey">Une révolution
   d'opportunité</h2>
       <div class="hidden green-button">
         <p class="txt-36 txt-bold">On y va !</p>  
       </div>
+      <div class="hidden anim"></div>
     </section>
-    <div class="imageintro--container margin-left margin-top2x overflow-hidden display-flex grid-row2">
+    <div class="imageintro--container margin-left margin-top2x overflow-hidden display-flex">
         <img src="assets/images/imageintro.png" alt="Plusieurs personnages se tenant l'air heureux dont plusieurs d'entres eux atteints de handicaps" srcset="assets/images/imageintro@2x.png 2x">
     </div>
     <div class="hidden-desktop">
     <p class="txt centered margin-top3x">Le web devrait être accessible à<span class="txt-bold"> tous</span></p>
     <p class="second-title centered txt-bold">Swippez !</p>
     <div class="swipe position-relative"></div>
-    <section class="margin-leftright1x">
-        <h2 class="second-title merriweather citation centered reveal opacity-0">«J'espère <span class="color-red txt-bold">sensibiliser</span> les futurs webdesigners&nbsp;à&nbsp; l'importance de concevoir des sites web&nbsp;accessibles&nbsp;à tous &nbsp;</h2>
-        <h2 class="second-title centered merriweather color-blue">Start !</h2>
-        <p class="txt margin-top2x">Dans le cadre de mon TFA, j’ai décidé d’aborder le thème de l'accessibilité du web pour les personnes atteintes de handicaps. Pour moi, il est primordial que le web soit accessible à tous, quelles que soient leurs capacités.</p>
-        <h2 class="second-title merriweather color-blue centered margin-top3x">Accessible ?</h2>
-        <p class="txt margin-top2x">Par accessible j’entends qu’il soit utilisé et compris par tous les utilisateurs, y&nbsp;compris&nbsp; ceux ayant des capacités différentes.</p>
-        <p class="txt margin-top2x">C’est une pratique importante pour garantir l'inclusion numérique et l'égalité des opportunités pour tous les utilisateurs.</p>
-        <h2 class="second-title merriweather color-blue centered margin-top3x">Le web pour tous !</h2>
-        <p class="txt margin-top2x bold">Ce défi est complexe, mais je suis convaincu que nous pouvons y parvenir ensemble, en travaillant de manière collaborative et en adoptant une approche axée sur l'utilisateur.</p>
-    </section>
-    <div class="defilement position-relative overflow-hidden margin-top3x margin-bottom3x">
-        <h1 class="first-title merriweather margin-top2x margin-bottom1x defilement-text color-white">Design adaptatif : Une expérience fluide pour chacun.</h1>
     </div>
-     <section class="margin-leftright1x">
+    <h2 class="grid-column1-5 second-title merriweather citation centered reveal opacity-0 margin-leftright1x margin-top3x">«J'espère <span class="color-red txt-bold">sensibiliser</span> les futurs webdesigners&nbsp;à&nbsp; l'importance de concevoir des sites web&nbsp;accessibles&nbsp;à tous &nbsp;»</h2>
+    <img class="grid-column1 grid-row6-7 start-img hidden margin-top3x" src="assets/images/start.png" alt="Logo de l'ASBL «ARAPH»" srcset="assets/images/start@2x.png 2x">
+    <h2 class="grid-column2 second-title centered merriweather color-blue centered-end margin-top3x">Start !</h2>
+    <p class="txt margin-top2x grid-column2-5 margin-leftright1x">Dans le cadre de mon TFA, j’ai décidé d’aborder le thème de l'accessibilité du web pour les personnes atteintes de handicaps. Pour moi, il est primordial que le web soit accessible à tous, quelles que soient leurs capacités.</p>
+    <h2 class="second-title merriweather color-blue centered margin-top3x centered-end grid-column2-5">Accessible ?</h2>
+    <p class="txt margin-top2x grid-column2-5 margin-leftright1x">Par accessible j’entends qu’il soit utilisé et compris par tous les utilisateurs, y&nbsp;compris&nbsp; ceux ayant des capacités différentes.</p>
+    <p class="txt margin-top2x grid-column2-5 margin-leftright1x">C’est une pratique importante pour garantir l'inclusion numérique et l'égalité des opportunités pour tous les utilisateurs.</p>
+    <h2 class="second-title merriweather color-blue centered margin-top3x centered-end grid-column2-5">Le web pour tous !</h2>
+    <p class="txt margin-top2x txt-bold grid-column2-5 margin-leftright1x">Ce défi est complexe, mais je suis convaincu que nous pouvons y parvenir ensemble, en travaillant de manière collaborative et en adoptant une approche axée sur l'utilisateur.</p>
+    <div class="defilement position-relative overflow-hidden margin-top3x margin-bottom3x grid-column1-5">
+    <h1 class="first-title merriweather margin-top2x margin-bottom1x defilement-text color-white margintop-0">Design adaptatif : Une expérience fluide pour chacun.</h1>
+    </div>
+     <section class="margin-leftright1x hidden-desktop">
           <h2 class="second-title merriweather centered reveal opacity-0">«Environ 6 % de la population belge souffre d'un handicap moteur, ce qui&nbsp;représente&nbsp;plus de <span class="color-red txt-bold" id=counter>0</span>&nbsp;personnes»</h2>
           <p class="txt txt-italic centered margin-bottom3x reveal opacity-0">-Organisation mondiale de la santé (OMS)</p>
           <p class="txt">Ces personnes peuvent rencontrer des difficultés à naviguer sur le web en raison de leur handicap, ce qui peut les priver d'un accès à des informations <span class="color-red txt-bold">vitales</span>, à des services en ligne et à des opportunités économiques et sociales. En garantissant que le web soit accessible à tous, nous pouvons aider à briser les barrières pour les personnes atteintes de handicaps moteurs en Belgique et <span class="color-red txt-bold"> améliorer leur qualité de vie.</span></p>
@@ -99,14 +101,14 @@
           <p class="txt margin-top2x">Pour améliorer le quotidien de ceux-ci, la première étape serait de sensibiliser l'entièreté du corps de métier à leur situation.</p>
           <img class="img--idee margin-top2x" src="assets/images/imageidee.png" alt="Des personnages souriant construisant une ampoule, signifiant une idée" srcset="assets/images/imageidee@2x.png 2x">
      </section>
-    <section class="bluesection--container margin-top3x reveal opacity-0">
+    <section class="bluesection--container margin-top3x reveal opacity-0 hidden-desktop">
         <h2 class="second-title merriweather color-white centered padding-top3x">Solution choisie</h2>
         <p class="txt margin-top2x margin-leftright1x color-white">Parmi les 3 solutions trouvées, celle que j'ai choisie d'explorer est la création d'un site web à la fois accessible et éducatif, que je pourrai montrer à des élèves de web-design et/ou à des professionnels. 
         <p class="txt margin-top2x margin-leftright1x color-white">Pour y parvenir, j'ai décidé d'utiliser plusieurs outils qui permettront aux utilisateurs de se mettre dans la peau d'une personne en situation de handicap. </p>
         <p class="txt margin-top2x margin-leftright1x color-white">Je compte ainsi intégrer un bouton simulant les tremblements et des options de navigation alternatives, telles que la navigation par la touche TAB. </p>
         <p class="txt margin-top2x margin-leftright1x color-white padding-bottom3x">Mon <span class="txt-bold">objectif</span> est de sensibiliser les futurs concepteurs de sites web à l'importance de la conception de sites accessibles pour tous, et ainsi contribuer à une meilleure inclusion des personnes en situation de handicap sur le web.</p>
     </section>
-    <section class="margin-leftright1x">
+    <section class="margin-leftright1x hidden-desktop">
         <h2 class="second-title merriweather color-blue centered margin-top3x">Les modules</h2>
         <p class="txt margin-top2x">Comme dit précédemment, ce site devra permettre la mise en situation des utilisateurs dans la peau d’un porteur de handicaps. Pour se faire, plusieurs fonctionnalités seront disponibles.</p>
         <div class="shaking-button border-solid margin-top2x margin-leftright1x centered padding-button">Bouton simulant les tremblements :</div>
@@ -121,7 +123,7 @@
 
         <img class="img--idee margin-top2x" src="assets/images/module@2x.png" alt="Illustration d'une main tenant un engrenage" srcset="assets/images/module@2x.png 2x">
     </section>
-    <section class="bluesection--container margin-top3x reveal opacity-0">
+    <section class="bluesection--container margin-top3x reveal opacity-0 hidden-desktop">
       <h2 class="second-title merriweather color-white centered padding-top3x">Préparation à l'oral</h2>
       <p class="txt margin-top2x margin-leftright1x color-white">Ma présentation orale sera divisée en plusieurs parties, chacune avec leur représentation visuelle par le biais d’un PowerPoint :</p> 
       <div class="slider position-relative margin-top2x margin-leftright1x">
@@ -182,13 +184,12 @@
       </div>
       <a href="https://nicolascoopman.be/projets/tfa/interviews" class="txt txt-bold txt-underline txt-inlineblock color-white margin-leftright1x margin-bottom3x">Retrouvez un accés à&nbsp; mon PowerPoint ici&nbsp;</a>
     </section>
-    <h2 class="second-title merriweather color-blue centered margin-top3x">Conclusion</h2>
-    <section class="margin-leftright1x">
+    <h2 class="second-title merriweather color-blue centered margin-top3x hidden-desktop">Conclusion</h2>
+    <section class="margin-leftright1x hidden-desktop">
       <p class="txt margin-top2x">En créant des sites web accessibles et pédagogiques, j’espère sensibiliser les futurs webdesigners à l’importance de concevoir des sites web accessibles à tous, y compris aux personnes en situation de handicap.</p>
       <p class="txt margin-top2x">La navigation sur le web doit être accessible à tous et j'espère que ce site internet contribuera à une meilleure inclusion de ces personnes en ligne</p>
       <p class="txt margin-top2x margin-bottom3x">En utilisant les outils et fonctionnalités que j'ai intégrés, j'espère que les utilisateurs seront en mesure de comprendre les défis auxquels sont confrontées les porteurs de handicaps et comment ils peuvent être surmontés grâce à des techniques appropriées de hiérarchisation et d'organisation du contenu.</p>
-    </section>
-  </div>
+    </section> 
   </main>
   <footer class="footer centered flex-column align-center display-flex">
     <small id="date"></small>

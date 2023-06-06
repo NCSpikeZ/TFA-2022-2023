@@ -34,8 +34,7 @@ function initNav() {
 
 //Compteur
 
-if (document.location.pathname === '/index.html') {
-  const counterElement = document.getElementById("counter");
+const counterElement = document.getElementById("counter");
 const targetCount = 660000;
 let currentCount = 0;
 
@@ -68,7 +67,6 @@ function updateCounterOnScroll() {
 }
 
 window.addEventListener('scroll', updateCounterOnScroll);
-}
 
 
 //fleche 

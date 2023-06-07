@@ -30,13 +30,27 @@
   
   .bluesection--container{
     background-color: var(--color-text-offset);
+    overflow-x: hidden;
   }
   
   .backgroundcolor-white{
     background-color: var(--color-bg);
   }
 
-  .footer a:hover {
-    color: var(--color-text-fourth);
+  .backgroundcolor-red{
+    background-color: var(--color-text-fourth);
   }
+
+  .footer a:hover {
+    color: var(--color-text-offset);
+    text-decoration: underline;
+  }
+
+  .green-button{
+    background-color: var(--color-bg-third);
+   }
+   
+   .line{
+     fill: #000000; 
+   }
   

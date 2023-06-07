@@ -1,5 +1,3 @@
-/*Swipe*/
-
 .swipe:before {
 	content: '';
 	width: 15px;
@@ -29,6 +27,23 @@
 	}
 }
 
+/*Burger menu*/
+
+.main-nav.show .line--1 {
+  transform: translate(-10px) rotate(45deg) translate(15px);
+}
+
+.main-nav.show .line--2 {
+  opacity: 0;
+}
+
+.main-nav.show .line--3 {
+  transform: translate(-10px) rotate(-45deg) translate(15px);
+}
+
+.main-nav.show .nav__links {
+  transform: translateX(0%);
+}
 
 /*Rouleau défilant*/
 .defilement{
@@ -219,11 +234,9 @@
     transform: rotate(135deg);
   }
   
-
   @media (min-width: 1024px) {
 
     .defilement-text {
-      white-space: nowrap;
       animation: scrollText 6s linear infinite;
       animation-delay: 1s;
     }

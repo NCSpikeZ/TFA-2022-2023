@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+  .lora{
+    font-family: 'Lora', serif;;
+  }
+  
+  .merriweather{
+    font-family: 'Merriweather', serif;
+  }
+
+  .menu-itemactive{
+    text-decoration: underline;
+  } 
+  
+  .menu-list_el:hover{
+    text-decoration: overline;
+  }
+
+  .first-title{
+    margin-top: 120px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px;
+  }
+
+  .second-title{
+    font-size: 24px;
+    white-space: pre-line;
+  }
+  
+  .txt-lessch{
+    max-width: 20ch;
+  }
+
+.txt{
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 60ch;
+  }
+  
+  .txt-italic{
+    font-style: italic;
+    font-weight: lighter;
+  }
+  
+  .txt-bold{
+    font-weight: bold;
+  }
+  
+  .txt-underline{
+    text-decoration: underline;
+  }
+  
+  .centered{
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+  .txt-ch{
+    max-width: 70ch;
+  }
+  }
+
+  @media (min-width: 1024px) {
+
+  .first-title{
+    font-size: 72px;
+    line-height: 80px;
+    grid-column: 1 / 2;
+    margin-top: 240px;
+  }
+
+  .second-title{
+    font-size: 36px;
+  }
+
+  .txt{
+    font-size: 24px;
+  }
+
+  .txt-36{
+  font-size: 36px;
+  }
+
+  .txt-lineheight{
+    line-height: 30px;
+  }
+
+  .txt-modules{
+    max-width: 40ch;
+  }
+
+  .centered-end{
+    text-align: initial;
+   }
+  }
+
+  @media (min-width: 1440px) {
+
+    .first-title{
+      font-size: 96px;
+      line-height: 106px;
+     }
+
+     .second-title{
+      font-size: 48px;
+    }
+    
+  }

@@ -1,0 +1,58 @@
+  .lora{
+    font-family: 'Lora', serif;;
+  }
+  
+  
+  .merriweather{
+    font-family: 'Merriweather', serif;
+  }
+  
+  .menu-itemactive{
+    text-decoration: underline;
+  } 
+  
+  
+  .menu-item:hover{
+    text-decoration: overline;
+  } 
+
+  .first-title{
+    margin-top: 120px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px;
+  }
+
+  .second-title{
+    font-size: 24px;
+    white-space: pre-line;
+  }
+  
+  .txt-lessch{
+    max-width: 20ch;
+  }
+
+  
+.txt{
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 60ch;
+  }
+  
+  .txt-italic{
+    font-style: italic;
+    font-weight: lighter;
+  }
+  
+  .txt-bold{
+    font-weight: bold;
+  }
+  
+  .txt-underline{
+    text-decoration: underline;
+  }
+  
+  .centered{
+    text-align: center;
+  }
+  

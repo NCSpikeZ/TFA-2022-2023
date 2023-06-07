@@ -1,0 +1,42 @@
+:root{ 
+    --color-bg: #FFF8F8;
+    --color-bg-offset: #181818;
+    --color-text: #000000;
+    --color-text-offset: #002D72;
+    --color-text-third: #525252;
+    --color-text-fourth: #72002D;
+    --color-bg-third: #2D7200;
+  }
+
+  .color-black{
+    color: var(--color-text);
+  }
+  
+  .color-grey{
+    color: var(--color-text-third);
+  }
+  
+  .color-red{
+    color: var(--color-text-fourth);
+  }
+  
+  .color-blue{
+    color: var(--color-text-offset);
+  }
+  
+  .color-white{
+  color: var(--color-bg);
+  }
+  
+  .bluesection--container{
+    background-color: var(--color-text-offset);
+  }
+  
+  .backgroundcolor-white{
+    background-color: var(--color-bg);
+  }
+
+  .footer a:hover {
+    color: var(--color-text-fourth);
+  }
+  

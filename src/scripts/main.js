@@ -102,10 +102,15 @@ hammerSlider.on("swiperight", prev);
 //Slider
 
 const btnPrev = document.querySelector(".slider__btn--prev"),
-      btnNext = document.querySelector(".slider__btn--next");
+      btnNext = document.querySelector(".slider__btn--next"),
+      arrowPrev = document.querySelector(".slider__arrow--left"),
+      arrowNext = document.querySelector(".slider__arrow--right");
+
 
 btnNext.addEventListener("click", next);
 btnPrev.addEventListener("click", prev);
+arrowNext.addEventListener("click", next);
+arrowPrev.addEventListener("click", prev);
 
 function next (){
     let elShow = document.querySelector(".slider__el--show"),

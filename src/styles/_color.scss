@@ -61,7 +61,15 @@
   background-color: var(--color-bg-third);
 }
 
+.visited{
+  color: red;
+}
+
 .line {
   fill: #000000; 
+}
+
+.slider__arrow:hover {
+  background-color: #eaeaea;
 }
 

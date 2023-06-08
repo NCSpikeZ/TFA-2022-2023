@@ -4,6 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+//Scroll
+
 function reveal() {
 var reveals = document.querySelectorAll(".reveal");
 
@@ -32,8 +35,9 @@ function initNav() {
   });
 }
 
-//Compteur
+//Seulement index.html
 if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
+//Compteur 
   const counterElement = document.getElementById("counter");
   const targetCount = 660000;
   let currentCount = 0;
@@ -67,6 +71,58 @@ if (window.location.pathname === "/index.html" || window.location.pathname === "
   }
 
   window.addEventListener('scroll', updateCounterOnScroll);
+
+  
+//Slider
+
+const btnPrev = document.querySelector(".slider__btn--prev"),
+btnNext = document.querySelector(".slider__btn--next"),
+arrowPrev = document.querySelector(".slider__arrow--left"),
+arrowNext = document.querySelector(".slider__arrow--right");
+
+
+btnNext.addEventListener("click", next);
+btnPrev.addEventListener("click", prev);
+arrowNext.addEventListener("click", next);
+arrowPrev.addEventListener("click", prev);
+
+function next (){
+let elShow = document.querySelector(".slider__el--show"),
+  elNext = elShow.nextElementSibling;
+
+  elShow.classList.remove("slider__el--show");
+
+  if(elNext){
+      elNext.classList.add("slider__el--show");
+  }else{
+      let elFirst = elShow.parentNode.firstElementChild;
+      elFirst.classList.add("slider__el--show");
+  }
+
+}
+
+function prev(){
+let elShow = document.querySelector(".slider__el--show"),
+  elPrev = elShow.previousElementSibling;
+
+  elShow.classList.remove("slider__el--show");
+
+  if(elPrev){
+      elPrev.classList.add("slider__el--show");
+  }else{
+      let elLast = elShow.parentNode.lastElementChild;
+      elLast.classList.add("slider__el--show");
+  }
+
+}
+
+
+  //Hammer (swipe sur le slider)
+  const slider = document.querySelector(".slider"),
+  hammerSlider = new Hammer(slider);
+
+  hammerSlider.on("swipeleft", next);
+  hammerSlider.on("swiperight", prev);
 }
 
 //fleche 
@@ -91,58 +147,6 @@ document.addEventListener("keydown", function(e){
     }
 });
 
-//Hammer (swipe sur le slider)
-const slider = document.querySelector(".slider"),
-    hammerSlider = new Hammer(slider);
-
-hammerSlider.on("swipeleft", next);
-hammerSlider.on("swiperight", prev);
-
-
-//Slider
-
-const btnPrev = document.querySelector(".slider__btn--prev"),
-      btnNext = document.querySelector(".slider__btn--next"),
-      arrowPrev = document.querySelector(".slider__arrow--left"),
-      arrowNext = document.querySelector(".slider__arrow--right");
-
-
-btnNext.addEventListener("click", next);
-btnPrev.addEventListener("click", prev);
-arrowNext.addEventListener("click", next);
-arrowPrev.addEventListener("click", prev);
-
-function next (){
-    let elShow = document.querySelector(".slider__el--show"),
-        elNext = elShow.nextElementSibling;
-
-        elShow.classList.remove("slider__el--show");
-
-        if(elNext){
-            elNext.classList.add("slider__el--show");
-        }else{
-            let elFirst = elShow.parentNode.firstElementChild;
-            elFirst.classList.add("slider__el--show");
-        }
-
-}
-
-
-function prev(){
-    let elShow = document.querySelector(".slider__el--show"),
-        elPrev = elShow.previousElementSibling;
-
-        elShow.classList.remove("slider__el--show");
-
-        if(elPrev){
-            elPrev.classList.add("slider__el--show");
-        }else{
-            let elLast = elShow.parentNode.lastElementChild;
-            elLast.classList.add("slider__el--show");
-        }
-
-}
-
 // Copyright
 let year = new Date().getFullYear();
 let date = document.querySelector("#date");
@@ -162,4 +166,23 @@ function toggleContenu() {
   var toggleContenu = document.getElementById(contentId);
   toggleContenu.classList.toggle('active');
   this.querySelector('.arrow').classList.toggle('rotate-down');
+
+  toggleContenu.addEventListener('click', function() {
+    toggleContenu.classList.remove('active');
+    titre.querySelector('.arrow').classList.remove('rotate-down');
+  });
 }
+
+//Retour à l'endroit d'ou on quitté la page
+if (typeof(Storage) !== "undefined") {
+  if (sessionStorage.getItem("scrollPosition")) {
+    var scrollPosition = sessionStorage.getItem("scrollPosition");
+    window.scrollTo(0, scrollPosition);
+    sessionStorage.removeItem("scrollPosition");
+  }
+
+  window.addEventListener("beforeunload", function() {
+    sessionStorage.setItem("scrollPosition", window.pageYOffset);
+  });
+}
+

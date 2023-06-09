@@ -36,7 +36,7 @@ function initNav() {
 }
 
 //Seulement index.html
-if (window.location.pathname === "/index.html" || window.location.pathname === "https://nicolascoopman.be/projets/tfa/index.html") {
+if (window.location.href === "https://nicolascoopman.be/projets/tfa/" || window.location.pathname === "/projets/tfa/index.html") {
 //Compteur 
   const counterElement = document.getElementById("counter");
   const targetCount = 660000;

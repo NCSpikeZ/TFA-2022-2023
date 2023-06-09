@@ -25,6 +25,18 @@ for (var i = 0; i < reveals.length; i++) {
 
 window.addEventListener("scroll", reveal);
 
+//fleche 
+
+var animation = bodymovin.loadAnimation({
+  container: document.querySelector('.anim'),
+  renderer: 'svg',
+  autoplay: true,
+  path: 'https://assets3.lottiefiles.com/packages/lf20_muyl0kpg.json'
+})
+
+animation.setSpeed(0.65);
+
+
 /* Burger */
 document.addEventListener('DOMContentLoaded', initNav);
 function initNav() {
@@ -37,6 +49,7 @@ function initNav() {
 
 //Seulement index.html
 if (window.location.href === "https://nicolascoopman.be/projets/tfa/" || window.location.pathname === "/projets/tfa/index.html") {
+  
 //Compteur 
   const counterElement = document.getElementById("counter");
   const targetCount = 660000;
@@ -115,6 +128,14 @@ let elShow = document.querySelector(".slider__el--show"),
   }
 
 }
+//Touches clavier
+document.addEventListener("keydown", function(e){
+    if(e.code == "ArrowLeft"){
+        prev();
+    }else if(e.code == "ArrowRight"){
+        next();
+    }
+});
 
 
   //Hammer (swipe sur le slider)
@@ -125,32 +146,12 @@ let elShow = document.querySelector(".slider__el--show"),
   hammerSlider.on("swiperight", prev);
 }
 
-//fleche 
-
-var animation = bodymovin.loadAnimation({
-  container: document.querySelector('.anim'),
-  renderer: 'svg',
-  autoplay: true,
-  path: 'https://assets3.lottiefiles.com/packages/lf20_muyl0kpg.json'
-})
-
-animation.setSpeed(0.65);
-
-
-
-//Touches clavier
-document.addEventListener("keydown", function(e){
-    if(e.code == "ArrowLeft"){
-        prev();
-    }else if(e.code == "ArrowRight"){
-        next();
-    }
-});
 
 // Copyright
 let year = new Date().getFullYear();
 let date = document.querySelector("#date");
 date.innerHTML = "©SpikeZ"+ String(year);
+
 
 // Menu déroulant
 

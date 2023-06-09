@@ -78,6 +78,10 @@
      width: 75px;
      height: 75px;
 }
+.video__container{
+    width: 300px;
+    height: 250px;
+}
 /*Burger-menu*/
  .burger {
      padding: 0.5rem;
@@ -98,6 +102,7 @@
      transition: transform 0.3s ease;
      box-shadow: 0px 1px 2px var(--color-bg-offset);
 }
+
  .nav__links a {
      width: 100px;
 }
@@ -293,6 +298,11 @@
     }
      .menu-container {
          width: 500px;
+    }
+
+    .video__container{
+        width: 560px;
+        height: 315px;
     }
 }
  @media (min-width: 1024px) {

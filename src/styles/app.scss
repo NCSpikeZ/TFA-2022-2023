@@ -192,7 +192,7 @@
 }
  .slider__content {
      grid-column: 1 / 7;
-     grid-row: 1 / 4;
+     grid-row: 1 / 5;
      border-radius: 25px;
      background-color: var(--color-text-fourth);
      z-index: 10;
@@ -206,7 +206,7 @@
 }
  .slider__controls {
      display: inline-flex;
-     grid-row: 3;
+     grid-row: 4;
      grid-column: 6;
 }
  .grid-row3 {

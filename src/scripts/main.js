@@ -1,41 +1,7 @@
 "use strict";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
-
-
-//Scroll
-
-function reveal() {
-var reveals = document.querySelectorAll(".reveal");
-
-for (var i = 0; i < reveals.length; i++) {
-  var windowHeight = window.innerHeight;
-  var elementTop = reveals[i].getBoundingClientRect().top;
-  var elementVisible = 150;
-
-  if (elementTop < windowHeight - elementVisible) {
-    reveals[i].classList.add("active");
-  } else {
-    reveals[i].classList.remove("active");
-  }
-}
-}
-
-window.addEventListener("scroll", reveal);
-
-//fleche 
-
-var animation = bodymovin.loadAnimation({
-  container: document.querySelector('.anim'),
-  renderer: 'svg',
-  autoplay: true,
-  path: 'https://assets3.lottiefiles.com/packages/lf20_muyl0kpg.json'
-})
-
-animation.setSpeed(0.65);
-
 
 /* Burger */
 document.addEventListener('DOMContentLoaded', initNav);
@@ -47,7 +13,6 @@ function initNav() {
   });
 }
 
-//Seulement index.html
 //Seulement index.html
 if (window.location.href === "https://nicolascoopman.be/projets/tfa/" || window.location.href === "https://nicolascoopman.be/projets/tfa/index.html" || window.location.href === "http://nicolascoopman.be/projets/tfa/" || window.location.href === "http://nicolascoopman.be/projets/tfa/index.html" || window.location.pathname === "/index.html") {
 //Compteur 
@@ -128,6 +93,7 @@ let elShow = document.querySelector(".slider__el--show"),
   }
 
 }
+
 //Touches clavier
 document.addEventListener("keydown", function(e){
     if(e.code == "ArrowLeft"){
@@ -136,17 +102,6 @@ document.addEventListener("keydown", function(e){
         next();
     }
 });
-
-
-  //Hammer (swipe sur le slider)
-  const slider = document.querySelector(".slider"),
-  hammerSlider = new Hammer(slider);
-
-  hammerSlider.on("swipeleft", next);
-  hammerSlider.on("swiperight", prev);
-}
-
-
 
 // Copyright
 let year = new Date().getFullYear();
@@ -174,17 +129,4 @@ function toggleContenu() {
     titre.querySelector('.arrow').classList.remove('rotate-down');
   });
 }
-
-//Retour à l'endroit d'ou on quitté la page
-if (typeof(Storage) !== "undefined") {
-  if (sessionStorage.getItem("scrollPosition")) {
-    var scrollPosition = sessionStorage.getItem("scrollPosition");
-    window.scrollTo(0, scrollPosition);
-    sessionStorage.removeItem("scrollPosition");
-  }
-
-  window.addEventListener("beforeunload", function() {
-    sessionStorage.setItem("scrollPosition", window.pageYOffset);
-  });
 }
-

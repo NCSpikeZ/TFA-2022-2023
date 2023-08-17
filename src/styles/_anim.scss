@@ -167,17 +167,6 @@
   pointer-events: all;
 }
 
-/* Scroll reveal animation */
-.reveal {
-  transform: translateY(150px);
-  transition: 2s all ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 /* Dropdown */
 .menu-container {
   width: auto;
@@ -245,9 +234,5 @@
 
   .menu-container {
     width: 650px;
-  }
-
-  .araph--logo.reveal.active {
-    transform: rotate(-90deg);
   }
 }

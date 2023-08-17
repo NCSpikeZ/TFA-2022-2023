@@ -39,9 +39,7 @@
  .align-center {
      align-items: center;
 }
- .opacity-0 {
-     opacity: 0;
-}
+
  .flex-column {
      flex-direction: column;
 }
@@ -355,7 +353,7 @@
          width: 250px;
          height: 70px;
          display: flex;
-         border-radius: 6%;
+         border-radius: 2%;
          align-items: center;
          justify-content: center;
          color: var(--color-bg);
@@ -364,12 +362,7 @@
      .hidden-desktop {
          display: none;
     }
-     .anim {
-         width: 150px;
-         margin-left: 200px;
-         opacity: 1;
-         transition: opacity 1s;
-    }
+
      .fade-out {
          opacity: 0;
     }

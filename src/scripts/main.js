@@ -25,6 +25,17 @@ function initNav() {
     nav.classList.toggle('show');
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerMenu = document.querySelector(".main-nav");
+  const menuLinks = document.querySelectorAll(".main-nav_links_el_link");
+
+  menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+          burgerMenu.classList.remove("show");
+      });
+  });
+});
+
 
 //Animation
 AOS.init();
@@ -130,15 +141,6 @@ leftArrow.addEventListener('click', goToPreviousSlide);
 rightArrow.addEventListener('click', goToNextSlide);
 
 updateIndicators();
-
-//Touches clavier
-document.addEventListener("keydown", function(e){
-    if(e.code == "ArrowLeft"){
-        prev();
-    }else if(e.code == "ArrowRight"){
-        next();
-    }
-});
 
 // Copyright
 let year = new Date().getFullYear();

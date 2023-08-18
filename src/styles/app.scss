@@ -28,12 +28,13 @@ display:none
 }
 
 .header {
-background-color:var(--color-bg);
+background-color:var(--color-bg-third);
+border-bottom-right-radius: 50px;
 left:0;
 opacity:.9;
 position:fixed;
 top:0;
-width:100vw;
+width:40vw;
 z-index:9999
 }
 
@@ -57,7 +58,7 @@ width:0
 //Burger-menu et navigation
 .main-nav_burger {
 cursor:pointer;
-margin-left:80%;
+margin-left:30%;
 padding:.5rem;
 z-index:9999
 }
@@ -66,7 +67,7 @@ z-index:9999
 align-items:center;
 display:flex;
 font-size:24px;
-height:10vh;
+height:5vh;
 opacity:1
 }
 
@@ -80,24 +81,24 @@ height:100vh;
 justify-content:center;
 opacity:1;
 position:fixed;
+top: 0vh;
 right:0;
-top:10vh;
 transform:translateX(100%);
 transition:transform .3s ease;
 width:100vw
 }
 
 .main-nav_links a {
-width:100px
+    margin-bottom: 18px;
 }
 
 .main-nav_burger-line {
-background-color:var(--color-text);
+background-color:var(--color-bg);
 display:block;
-height:3px;
+height:2px;
 margin:.5rem 0;
 transition:transform .75s ease,opacity .75s ease;
-width:35px
+width:40px
 }
 
 .main-nav_links_el {
@@ -106,8 +107,14 @@ list-style:none
 
 .main-nav_links_el_link {
 align-items:center;
-display:block
+display:block;
+opacity: 0;
+transition: opacity 1.5s ease-in-out;
 }
+
+.main-nav_links_el_link:hover {
+    text-decoration: overline;
+    }
 
 .el_link--active {
 text-decoration:underline
@@ -175,7 +182,6 @@ position:relative
 .person-card {
 border:1px solid #ccc;
 border-radius:5px;
-grid-column:1/5;
 margin-bottom:20px;
 text-align:left
 }
@@ -221,31 +227,8 @@ max-height:40vh
 }
 
 .image {
-width:30vw
+width:20vw
 }
-
-//No burger
-.main-nav_burger {
-display:none
-}
-
-.main-nav_links {
-box-shadow:initial;
-flex-direction:row;
-height:initial;
-justify-content:flex-end;
-position:initial;
-width:50vw
-}
-
-.main-nav_links a {
-display:initial
-}
-
-.main-nav_links li {
-margin-right:48px
-}
-
 .content {
 max-width:100vw
 }
@@ -268,6 +251,15 @@ transition:transform .5s;
 width:15px
 }
 
+.header{
+    width: 30vw;
+}
+
+.main-nav_burger {
+margin-left:80%;
+}
+    
+
 @media (min-width: 860px) {
 .introSection {
 display:grid;
@@ -277,7 +269,7 @@ margin-bottom:160px;
 margin-top:120px;
 max-width:1400px
 }
-        
+
 .content {
 grid-template-columns:1fr 1fr 1fr 2fr 1fr 2fr 2fr 1fr 1fr;
 margin:auto;
@@ -367,11 +359,6 @@ scale:1.1;
 text-decoration:none
 }
 
-//Header
-.main-nav_links {
-width:50vw
-}
-
 .topSection {
 height:35vh
 }
@@ -402,17 +389,19 @@ margin-top:3em
 
 .slider-container {
 border-radius:100px;
-margin-left:25vw;
+margin-left:20vw;
 margin-top:5em;
-max-width:50vw
+max-width:60vw
 }
 }
+
+.image-chaise {
+    grid-row:2/5 span;
+    width: 25vw;
+}
+    
 
 @media (min-width: 1366px) {
-.image {
-width:20vw
-}
-
 .slider__content {
 padding-left:5vw
 }

@@ -2,10 +2,10 @@
   --color-bg:#FFF8F8;
   --color-bg-offset:#181818;
   --color-text:#000;
-  --color-text-offset:#002D72;
+  --color-text-offset:#4947D7;
   --color-text-third:#525252;
-  --color-text-fourth:#72002D;
-  --color-bg-third:#2D7200;
+  --color-text-fourth:#C03221;
+  --color-bg-third:#000000;
   }
   
   .color--blue {
@@ -14,23 +14,23 @@
   
   .backgroundcolor--blue {
   background-color:var(--color-text-offset)
-}
-
-  .backgroundcolor--black{
-    background-color: var(--color-text);
-}
-
-.backgroundcolor--white{
-  background-color: var(--color-bg);
-}
-
-.backgroundcolor--red{
-  background-color: var(--color-text-fourth);
-}
-
-.backgroundcolor--green{
-  background-color: var(--color-text-third);
-}
+  }
+  
+  .backgroundcolor--black {
+  background-color:var(--color-text)
+  }
+  
+  .backgroundcolor--white {
+  background-color:var(--color-bg)
+  }
+  
+  .backgroundcolor--red {
+  background-color:var(--color-text-fourth)
+  }
+  
+  .backgroundcolor--green {
+  background-color:var(--color-text-third)
+  }
   
   .color--white {
   color:var(--color-bg)

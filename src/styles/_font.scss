@@ -1,5 +1,4 @@
 @import "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap";
-
 @import "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
 
 .title {
@@ -55,18 +54,17 @@ font-size:13.5px
 }
 
 .lien {
-    text-decoration:underline
-    }
-    
-    .lien:visited {
-    opacity:.7;
-    text-decoration:line-through
-    }
-    
-    .lien:hover {
-    text-decoration:overline
-    }
-    
+text-decoration:underline
+}
+
+.lien:visited {
+opacity:.7;
+text-decoration:line-through
+}
+
+.lien:hover {
+text-decoration:overline
+}
 
 .txt--italic {
 font-style:italic;
@@ -94,36 +92,34 @@ text-decoration:overline
 }
 
 .citation {
-    margin-bottom:90px;
-    margin-top:90px;
-    text-align:center
-    }
+margin-bottom:90px;
+margin-top:90px;
+text-align:center
+}
 
-    .title--small {
-        font-size:18px
-        }
-        
-        .txt--highlight {
-        border-left:12px solid var(--color-text-fourth);
-        padding-left:12px
-        }
+.title--small {
+font-size:18px
+}
 
-
+.txt--highlight {
+border-left:12px solid var(--color-text-fourth);
+padding-left:12px
+}
 
 @media (min-width: 860px) {
-    body {
-        font-size:18px
+body {
+font-size:18px
 }
+
 .title {
-    font-size:36px
-    }
-    
-    .title--big {
-    font-size:72px
-    }
-    
-    .title--small {
-    font-size:24px
-    }
+font-size:36px
 }
-    
+
+.title--big {
+font-size:72px
+}
+
+.title--small {
+font-size:24px
+}
+}

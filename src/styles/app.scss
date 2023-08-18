@@ -231,19 +231,13 @@ flex-direction: column;
 align-items: flex-start;
 grid-column: 1/-1;
 }
-  
+
 .hover-text {
-    display: none;
     background-color: var(--color-text-offset);
     color: white;
     padding: 20px;
     box-sizing: border-box;
 }
-  
-  .item:hover .hover-text {
-    display: block;
-  }
-  
 
 @media (min-width: 768px) {
 //Image 
@@ -433,6 +427,19 @@ max-width:60vw
     grid-row:2/5 span;
     width: 25vw;
 }
+
+.hover-text {
+    display: none;
+}
+
+.item_img{
+    width: 5vw;
+    height: 5vw;
+}
+
+.item:hover .hover-text {
+    display: block;
+  }
 }
 
 @media (min-width: 1366px) {

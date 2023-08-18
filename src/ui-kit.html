@@ -27,24 +27,25 @@
       <meta property="og:url" content="http://www.nicolascoopman.be/projets/tfa/ui-kit.html">
       <meta property="og:site_name" content="nicolascoopman.be">
       <link rel="stylesheet" href="styles/app.css">
-      <script src="scripts/lottie.js"></script>
-      <script src="scripts/hammer.min.js" defer></script>
       <script src="scripts/main.js" defer></script>
    </head>
-   <body class="lora backgroundcolor-white color-black">
-      <header class="header__container topleft-0 zindex-high backgroundcolor-white position-fixed">
-         <nav class="main-nav width-100vw align-center display-flex">
-            <div class="burger cursor-pointer">
+   <body>
+      <header class="header">
+         <nav class="main-nav">
+            <div class="main-nav_burger cursor--pointer">
                <div class="line backgroundcolor-black display-block line--1"></div>
                <div class="line backgroundcolor-black display-block line--2"></div>
                <div class="line backgroundcolor-black display-block line--3"></div>
             </div>
-            <ul class="nav__links flex-column align-center display-flex position-fixed backgroundcolor-white txt merriweather">
-               <li class="menu-list_el"><a class="menu-itemactive display-block centered" href="index.html">Présentation</a></li>
+            <ul class="main-nav__links">
+               <li class="menu-list_el"><a class="menu-itemactive txt-underline display-block centered" href="index.html">Présentation</a></li>
                <li class="menu-list_el"><a class="menu-item opacity display-block centered" href="interviews.html">Interviews</a></li>
             </ul>
          </nav>
       </header>
+      <div class="progress-container">
+         <div class="progress-container_bar"></div>
+      </div>
       <main class="main--grid">
          <div class="margin-leftright1x grid-column1-4 margin-left">
             <h1 class="first-title">Ui-kit :</h1>

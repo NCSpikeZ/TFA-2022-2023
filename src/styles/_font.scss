@@ -1,139 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap";
 
-.lora {
-  font-family: 'Lora', serif;
+@import "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+
+.title {
+font-family:'Merriweather',serif;
+font-size:24px;
+font-weight:700;
+grid-column:1/-1;
+margin-bottom:18px;
+margin-top:36px
 }
 
-.merriweather {
-  font-family: 'Merriweather', serif;
+.title--big {
+font-size:32px
 }
 
-body{
-  font-size:18px;
-  font-stretch:normal;
-  font-style:normal;
-  font-weight:400;
-  line-height:1.5;
-  overflow-x:hidden;
+.introSection_title {
+margin-top:15vh;
+font-weight:400;
+line-height:58px
 }
 
-p{
-  max-width: 60ch;
+.introSection_subtitle {
+color:var(--color-text-third);
+font-size:16px;
+margin-top:16px
 }
 
-.first-title {
-  margin-top: 120px;
-  font-size: 48px;
-  font-weight: 400;
+body {
+font-size:16px;
+font-stretch:normal;
+font-style:normal;
+font-weight:400;
+line-height:1.5;
+overflow-x:hidden;
+font-family:'Lora',serif;
+color:var(--color-text);
+background-color:var(--color-bg)
+}
+
+.txt {
+grid-column:1/5;
+margin-bottom:18px;
+max-width:70ch
 }
 
 .second-title {
-  font-size: 24px;
-  white-space: pre-line;
+font-size:24px;
+white-space:pre-line
 }
 
-.third-title {
-  font-size: 20px;
+.copyright {
+font-size:13.5px
 }
 
-.txt-lessch {
-  max-width: 20ch;
+.txt--italic {
+font-style:italic;
+font-weight:lighter
 }
 
-.copyright{
-  font-size: 13.5px;
+.txt--bold {
+font-weight:700
 }
 
-.txt-italic {
-  font-style: italic;
-  font-weight: lighter;
+.txt--underline {
+text-decoration:underline
 }
 
-.txt-bold {
-  font-weight: bold;
+.txt--centered {
+text-align:center
 }
 
-.txt-underline {
-  text-decoration: underline;
-}
-
-.centered {
-  text-align: center;
-}
-
-.txt-overline {
-  text-decoration: overline;
+.txt--overline {
+text-decoration:overline
 }
 
 .menu-list_el:hover {
-  text-decoration: overline;
-}
-
-
-@media (min-width: 768px) {
-  .txt-ch {
-    max-width: 70ch;
-  }
-}
-
-@media (min-width: 1024px) {
-  .first-title {
-    font-size: 72px;
-    grid-column: 1 / 2;
-    margin-top: 240px;
-  }
-
-  .second-title {
-    font-size: 36px;
-  }
-
-  .txt {
-    font-size: 24px;
-  }
-
-  .txt-36 {
-    font-size: 36px;
-  }
-
-  .txt-modules {
-    max-width: 40ch;
-  }
-
-  .centered-end {
-    text-align: initial;
-  }
-
-  .copyright{
-    font-size: 18px;
-  }
-  
-}
-
-@media (min-width: 1440px) {
-  .first-title {
-    font-size: 96px;
-  }
-
-  .second-title {
-    font-size: 48px;
-  }
-}
-
-@media (min-width: 2500px) {
-.txt{
-  font-size: 36px;
-}
-
-.first-title{
-  font-size: 144px;
-}
-
-.second-title{
-  font-size: 72px;
-}
-
-.copyright{
-  font-size: 24px;
-}
+text-decoration:overline
 }

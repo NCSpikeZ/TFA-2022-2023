@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html class="html" lang="fr">
    <head>
       <meta charset="UTF-8">
@@ -27,135 +26,139 @@
       <meta property="og:url" content="http://www.nicolascoopman.be/projets/tfa/interviews.html">
       <meta property="og:site_name" content="nicolascoopman.be">
       <link rel="stylesheet" href="styles/app.css">
-      <script src="scripts/lottie.js"></script>
-      <script src="scripts/hammer.min.js" defer></script>
       <script src="scripts/main.js" defer></script>
    </head>
-   <body class="lora backgroundcolor-white color-black">
-      <header class="header__container topleft-0 zindex-high backgroundcolor-white position-fixed">
-         <nav class="main-nav width-100vw align-center display-flex">
-            <div class="burger cursor-pointer">
-               <div class="line backgroundcolor-black display-block line--1"></div>
-               <div class="line backgroundcolor-black display-block line--2"></div>
-               <div class="line backgroundcolor-black display-block line--3"></div>
+   <body>
+      <header class="header">
+         <nav class="main-nav">
+            <div class="main-nav_burger cursor--pointer">
+               <div class="main-nav_burger-line line--1"></div>
+               <div class="main-nav_burger-line line--2"></div>
+               <div class="main-nav_burger-line line--3"></div>
             </div>
-            <ul class="nav__links flex-column align-center display-flex position-fixed backgroundcolor-white txt merriweather">
-               <li class="menu-list_el"><a class="menu-item lien-hover display-block centered" href="index.html">Présentation</a></li>
-               <li class="menu-list_el"><a class="menu-itemactive txt-underline lien-hover opacity display-block centered" href="interviews.html">Interviews</a></li>
+            <ul class="main-nav_links">
+               <li class="main-nav_links_el"><a class="main-nav_links_el_link" href="index.html">Présentation</a></li>
+               <li class="main-nav_links_el"><a class="main-nav_links_el_link el_link--active" href="interviews.html">Interviews</a></li>
             </ul>
          </nav>
       </header>
-      <main class="main--grid">
-         <section class="intro--section">
-            <h1 class="first-title margin-bottom1x margin-leftright1x merriweather">Interviews Conclusions</h1>
-            <h2 class="second-title margin-leftright1x merriweather color-grey">Rencontres avec l'ASBL et les concernées</h2>
-            <div class="hidden green-button align-center">
-               <a class="txt-36 txt-bold" href="#scroll">On y va !</a> 
+      <div class="progress-container">
+         <div class="progress-container_bar"></div>
+      </div>
+      <main class="main">
+         <section class="introSection">
+            <h1 class="introSection_title title title--big">Interviews Conclusions</h1>
+            <h2 class="introSection_subtitle title">Rencontres avec l'ASBL et les concernées</h2>
+            <a class="hidden green-button txt--36 txt--bold" href="#scroll">On y va !</a> 
+            <div class="introImage-container">
+               <img class="introImage" src="assets/images/imageiinterviews.png" alt="Illustration d'une interviews avec une personne en fauteuil roulant" srcset="assets/images/imageiinterviews@2x.png 2x">
             </div>
-            <div class="hidden anim grid-column1"></div>
+            <div class="hidden-desktop">
+               <p class="txt txt--centered">Le web devrait être accessible à<span class="txt-bold"> tous</span></p>
+               <h2 class="title txt--centered txt--bold">Swippez !</h2>
+            </div>
          </section>
-         <div class="imageintro--container margin-top2x overflow-hidden display-flex">
-            <img src="assets/images/imageiinterviews.png" alt="Illustration d'une interviews avec une personne en fauteuil roulant" srcset="assets/images/imageiinterviews@2x.png 2x">
-         </div>
-         <div class="hidden-desktop">
-            <p class="txt centered margin-top3x txt-ch">Le web devrait être accessible à<span class="txt-bold"> tous</span></p>
-            <p class="second-title centered txt-bold">Swippez !</p>
-            <div class="swipe position-relative"></div>
-         </div>
-         <h2 id="scroll" class="second-title centered centered-end merriweather color-blue margin-top3x margin-leftright1x grid-column1-4 margin-topspec">Résumé des interviews</h2>
-         <p class="txt margin-top2x grid-column1-4 margin-leftright1x grid-row3">En résumant brièvement mes échanges avec ARAPH voici ce qu’on obtient:</p>
-         <div class="menu-container cursor-pointer overflow-hidden margin-top2x grid-column1-4 grid-row4 margin-leftright1x">
-            <div class="toggle-titre padding-20 align-center display-flex space-between" id="toggle-titre-1">
-               <p class="txt txt-lineheight">L'objectif de l'ARAPH</p>
-               <span class="arrow"></span>
+         <section id="section1" class="section">
+            <div class="content">
+               <h2 id="scroll" class="title color--blue">Résumé des interviews</h2>
+               <h3 class="title title--small color--blue">ARAPH</h3>
+               <p class="txt">En résumant brièvement mes échanges avec ARAPH je peux représenter les infos les plus importantes comme cela:</p>
+               <ul class="grid-column2-10">
+                  <li>
+                     <details class="details-interview">
+                        <summary class="details-interview-summary">
+                           L'objectif de l'ARAPH :
+                           <svg class="more" viewBox="0 0 24 24"  fill-rule="evenodd">
+                              <path fill-rule="evenodd" d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"/>
+                           </svg>
+                        </summary>
+                        <p class="txt">L'objectif principal de l'ARAPH est d'améliorer la qualité de vie des personnes handicapées en leur permettant un accès égal aux technologies de l'information et de la communication.</p>
+                     </details>
+                  </li>
+                  <li>
+                     <details class="details-interview">
+                        <summary class="details-interview-summary">
+                           L'accessibilité selon l'ARAPH :
+                           <svg class="more" viewBox="0 0 24 24"  fill-rule="evenodd">
+                              <path fill-rule="evenodd" d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"/>
+                           </svg>
+                        </summary>
+                        <p class="txt">Les critères d'accessibilité les plus importants pour l'ARAPH en ce qui concerne les sites web sont la mise à disposition d'alternatives pour les images, les vidéos et les sons, ainsi que la facilité d'utilisation des interfaces claires et bien structurées.</p>
+                     </details>
+                  </li>
+                  <li>
+                     <details class="details-interview">
+                        <summary class="details-interview-summary">
+                           Comment travaillent-ils ? :
+                           <svg class="more" viewBox="0 0 24 24"  fill-rule="evenodd">
+                              <path fill-rule="evenodd" d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"/>
+                           </svg>
+                        </summary>
+                        <p class="txt">L'ARAPH travaille avec les propriétaires de sites web en leur fournissant des conseils personnalisés sur la manière d'améliorer l'accessibilité de leur site, ainsi que des formations et des audits d'accessibilité</p>
+                        <p class="txt">Ils sensibilisent aussi le public aux problèmes d'accessibilité du web en organisant des événements, en diffusant des informations sur les réseaux sociaux et en créant des partenariats avec d'autres associations.</p>
+                     </details>
+                  </li>
+                  <li>
+                     <details class="details-interview">
+                        <summary class="details-interview-summary">
+                           Leurs défis :
+                           <svg class="more" viewBox="0 0 24 24"  fill-rule="evenodd">
+                              <path fill-rule="evenodd" d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"/>
+                           </svg>
+                        </summary>
+                        <p class="txt">Les défis les plus importants que l'ARAPH rencontre dans son travail pour améliorer l'accessibilité du web sont le manque de ressources et de financement, ainsi que la difficulté à sensibiliser les propriétaires de sites web et les fabricants de technologies à l'importance de l'accessibilité.</p>
+                     </details>
+                  </li>
+               </ul>
+               <p class="txt txt--highlight"><span class="txt-bold">En conclusion,</span> il est crucial de reconnaître les barrières auxquelles les personnes handicapées sont confrontées lorsqu'elles naviguent sur le web et de travailler à les surmonter.</p>
+               <p class="txt">L’ARAPH joue un rôle important dans cette mission en fournissant des conseils personnalisés, des formations et des audits pour aider les propriétaires de sites web à améliorer leur accessibilité. Avec une sensibilisation accrue et une collaboration continue, nous pouvons garantir que le web devient un <span class="txt-bold">espace inclusif</span> pour tous les utilisateurs.</p>
             </div>
-            <div class="toggle-contenu padding-20 opacity-0" id="toggle-contenu-1">
-               <p class="txt txt-lineheight">L'objectif principal de l'ARAPH est d'améliorer la qualité de vie des personnes handicapées en leur permettant un accès égal aux technologies de l'information et de la communication.</p>
-            </div>
-         </div>
-         <div class="menu-container cursor-pointer overflow-hidden margin-top2x grid-column1-4 grid-row5 margin-leftright1x">
-            <div class="toggle-titre padding-20 align-center display-flex space-between" id="toggle-titre-2">
-               <p class="txt txt-lineheight">L'accessibilité selon l'ARAPH</p>
-               <span class="arrow"></span>
-            </div>
-            <div class="toggle-contenu padding-20 opacity-0" id="toggle-contenu-2">
-               <p class="txt txt-lineheight">Les critères d'accessibilité les plus importants pour l'ARAPH en ce qui concerne les sites web sont la mise à disposition d'alternatives pour les images, les vidéos et les sons, ainsi que la facilité d'utilisation des interfaces claires et bien structurées.</p>
-            </div>
-         </div>
-         <div class="menu-container cursor-pointer overflow-hidden margin-top2x grid-column1-4 grid-row6 margin-leftright1x">
-            <div class="toggle-titre padding-20 align-center display-flex space-between" id="toggle-titre-3">
-               <p class="txt txt-lineheight">Comment travaillent-ils ?</p>
-               <span class="arrow"></span>
-            </div>
-            <div class="toggle-contenu padding-20 opacity-0" id="toggle-contenu-3">
-               <p class="txt txt-lineheight">L'ARAPH travaille avec les propriétaires de sites web en leur fournissant des conseils personnalisés sur la manière d'améliorer l'accessibilité de leur site, ainsi que des formations et des audits d'accessibilité</p>
-               <p class="txt margin-top2x txt-lineheight">Ils sensibilisent aussi le public aux problèmes d'accessibilité du web en organisant des événements, en diffusant des informations sur les réseaux sociaux et en créant des partenariats avec d'autres associations.</p>
-            </div>
-         </div>
-         <div class="menu-container cursor-pointer overflow-hidden margin-top2x grid-column1-4 grid-row7 margin-leftright1x">
-            <div class="toggle-titre padding-20 align-center display-flex space-between" id="toggle-titre-4">
-               <p class="txt txt-lineheight">Leurs défis</p>
-               <span class="arrow"></span>
-            </div>
-            <div class="toggle-contenu padding-20 opacity-0" id="toggle-contenu-4">
-               <p class="txt txt-lineheight">Les défis les plus importants que l'ARAPH rencontre dans son travail pour améliorer l'accessibilité du web sont le manque de ressources et de financement, ainsi que la difficulté à sensibiliser les propriétaires de sites web et les fabricants de technologies à l'importance de l'accessibilité.</p>
-            </div>
-         </div>
-         <img class="img-tel img--idee redim-desktop grid-column3-6 grid-row2 margin-top2x reveal opacity-0" src="assets/images/interviews2.png" alt="Illustration d'une interviews entre deux personnages autour d'une table" srcset="assets/images/interviews2@2x.png 2x">
-         <p class="txt margin-top3x grid-column1-4 margin-leftright1x"><span class="txt-bold">En conclusion,</span> il est crucial de reconnaître les barrières auxquelles les personnes handicapées sont confrontées lorsqu'elles naviguent sur le web et de travailler à les surmonter.</p>
-         <p class="txt margin-top2x grid-column1-4 margin-leftright1x">L’ARAPH joue un rôle important dans cette mission en fournissant des conseils personnalisés, des formations et des audits pour aider les propriétaires de sites web à améliorer leur accessibilité. Avec une sensibilisation accrue et une collaboration continue, nous pouvons garantir que le web devient un <span class="txt-bold">espace inclusif</span> pour tous les utilisateurs.</p>
-         <h2 class="second-title centered centered-end merriweather color-blue margin-top3x grid-column1">Le centre du projet </h2>
-         <p class="txt margin-top2x grid-column1-3 margin-leftright1x">Comme dit précédemment et grâce à l’aide de l’ASBL j’ai aussi interviewée, plusieurs hommes et femmes porteurs de handicap, notamment :</p>
-         <div class="person-card borderradius-4 padding-20 grid-column1 margin-top3x opacity-0 reveal">
-            <h3 class="txt merriweather color-blue">Anne - Maladie de Parkinson</h3>
-            <p class="txt margin-top2x">Anne à <span class="txt-bold">72 ans</span>, elle est confrontée à des difficultés d'accès au web en raison de sa maladie de Parkinson.</p>
-            <p class="txt margin-top2x">Les symptômes tels que les tremblements et la rigidité musculaire rendent l'utilisation d'un clavier et d'une souris conventionnels particulièrement difficile pour elle.</p>
-         </div>
-         <div class="person-card borderradius-4 padding-20 margin-top3x grid-column1 opacity-0 reveal">
-            <h3 class="txt merriweather color-blue">Pierre - DMLA</h3>
-            <p class="txt margin-top2x">Pierre, <span class="txt-bold">56 ans</span>, à beaucoup de mal à naviguer sur internet en raison de sa dégénérescence maculaire liée à l'âge.</p>
-            <p class="txt margin-top2x">Les symptômes de sa condition, tels que la perte de vision centrale et la difficulté à distinguer les détails, rendent l'utilisation d'un écran d'ordinateur traditionnel difficile pour lui.</p>
-         </div>
-         <div class="person-card borderradius-4 padding-20 margin-top3x grid-column1 opacity-0 reveal">
-            <h3 class="txt merriweather color-blue">Émilie - Syndrome de Guillain-Barré</h3>
-            <p class="txt margin-top2x">Émilie, du haut de ses <span class="txt-bold">32 ans</span> est une personne motivée, mais son syndrome de Guillain-Barré limite son accès au web. Ce syndrome se caractérise par une faiblesse musculaire et une paralysie temporaire.</p>
-            <p class="txt margin-top2x">Ce syndrome se caractérise par une faiblesse musculaire et une paralysie temporaire.</p>
-         </div>
-         <div class="person-card borderradius-4 padding-20 grid-column2-4 margin-top3x hidden grid-row13 opacity-0 reveal">
-            <h3 class="txt merriweather color-blue">Maladie de Parkinson - Définition abrégée</h3>
-            <p class="txt margin-top2x">La maladie de Parkinson est une affection neurologique chronique qui affecte principalement le mouvement.</p>
-            <p class="txt margin-top2x">Elle se caractérise par des tremblements, une rigidité musculaire, des mouvements lents et une difficulté à maintenir l'équilibre.</p>
-         </div>
-         <div class="person-card borderradius-4 padding-20 margin-top3x grid-column2-4 hidden grid-row14 opacity-0 reveal">
-            <h3 class="txt merriweather color-blue">DMLA - Définition abrégée</h3>
-            <p class="txt margin-top2x"> La DMLA est une affection oculaire courante chez les personnes âgées, qui provoque une détérioration progressive de la macula, la partie centrale de la rétine responsable de la vision détaillée.</p>
-            <p class="txt margin-top2x"> Cela peut entraîner une perte de vision centrale, rendant difficile la lecture de petits caractères, la visualisation d'images ou la navigation sur des sites Web complexes. </p>
-         </div>
-         <div class="person-card borderradius-4 padding-20 margin-top3x grid-column2-4 hidden grid-row15 opacity-0 reveal">
-            <h3 class="txt merriweather color-blue">Syndrome de Guillain-Barré - Définition abrégée</h3>
-            <p class="txt margin-top2x">Le syndrome de Guillain-Barré est une maladie auto-immune rare qui provoque une inflammation des nerfs périphériques. Cela entraîne une faiblesse musculaire progressive, une paralysie et des troubles de la sensibilité.</p>
-            <p class="txt margin-top2x">Les symptômes commencent souvent par des engourdissements et des picotements, puis se propagent vers le haut du corps.</p>
-         </div>
-         <section class="backgroundcolor-blue width-100vw margin-top3x reveal opacity-0 grid-column1-4 nomargin">
-            <h2 class="second-title centered merriweather color-white padding-top3x centered-end margin-left500">Sujets abordés</h2>
-            <ul class="margin-top2x margin-leftright1x centered color-white txt margin-left500 centered-end">
-               <li class="margin-leftright1x">L'utilisation régulière d'Internet et la navigation sur les pages web par&nbsp;sois-&nbsp;même.</li>
-               <li class="margin-top2x margin-leftright1x">Les méthodes de navigation actuelles et les difficultés rencontrées, notamment avec les boutons non-reconnus, les temps de chargement et les tremblements.</li>
-               <li class="margin-top2x margin-leftright1x">Les idées pour améliorer l'accessibilité, y compris la prise en compte de l'accessibilité dès la conception des sites&nbsp;web.</li>
-               <li class="margin-top2x padding-bottom3x margin-leftright1x">L'idée de normaliser la navigation par regard et son potentiel bénéfice pour les personnes ne pouvant pas utiliser une souris ou un clavier.</li>
-            </ul>
          </section>
-         <div class="grid-column1-4 margin-left50 txt margin-leftright1x">
-            <h2 class="second-title centered centered-end merriweather color-blue margin-top3x">Conclusion</h2>
-            <p class="margin-top2x">Les interviews mettent en lumière les difficultés rencontrées par les personnes atteintes de handicap lorsqu'elles naviguent sur internet et suggère des idées pour améliorer l'accessibilité des sites web.</p>
-            <p class="margin-top2x">L'idée de normaliser la navigation par regard est envisagée comme une solution prometteuse pour faciliter la navigation pour les personnes ne pouvant pas utiliser une souris ou un clavier, mais nécessite encore des développements pour être concrétisée.</p>
-            <p class="margin-top2x">Les principales barrières auxquelles ils sont confrontés lorsqu'ils naviguent sur internet sont liées aux problèmes de navigation, à la difficulté à utiliser les boutons, aux tremblements et au zoom.</p>
-            <p class="margin-top2x margin-bottom3x txt-bold">Ils ont proposé que l'accessibilité soit prise en compte dès le début de la conception des sites web.</p>
-         </div>
+         <section id="section2" class="section">
+            <div class="content">
+               <h2 class="title txt--centered color--blue">Le centre du projet </h2>
+               <p class="txt">Comme dit précédemment et grâce à l’aide de l’ASBL j’ai aussi interviewée, plusieurs hommes et femmes porteurs de handicap, notamment :</p>
+               <div class="person-card">
+                  <h3 class="title color--blue">Anne - Maladie de Parkinson</h3>
+                  <p class="txt">Anne à <span class="txt-bold">72 ans</span>, elle est confrontée à des difficultés d'accès au web en raison de sa maladie de Parkinson.</p>
+                  <p class="txt">Les symptômes tels que les tremblements et la rigidité musculaire rendent l'utilisation d'un clavier et d'une souris conventionnels particulièrement difficile pour elle.</p>
+               </div>
+               <div class="person-card">
+                  <h3 class="title color--blue">Pierre - DMLA</h3>
+                  <p class="txt">Pierre, <span class="txt-bold">56 ans</span>, à beaucoup de mal à naviguer sur internet en raison de sa dégénérescence maculaire liée à l'âge.</p>
+                  <p class="txt">Les symptômes de sa condition, tels que la perte de vision centrale et la difficulté à distinguer les détails, rendent l'utilisation d'un écran d'ordinateur traditionnel difficile pour lui.</p>
+               </div>
+               <div class="person-card">
+                  <h3 class="title color--blue">Émilie - Syndrome de Guillain-Barré</h3>
+                  <p class="txt">Émilie, du haut de ses <span class="txt-bold">32 ans</span> est une personne motivée, mais son syndrome de Guillain-Barré limite son accès au web. Ce syndrome se caractérise par une faiblesse musculaire et une paralysie temporaire.</p>
+                  <p class="txt">Ce syndrome se caractérise par une faiblesse musculaire et une paralysie temporaire.</p>
+               </div>
+            </div>
+         </section>
+         <section id="section7" class="backgroundcolor--blue section color--white">
+            <div class="content">
+               <h2 class="title txt--centered">Sujets abordés</h2>
+               <ul class="txt grid-column4-7">
+                  <li class="txt">L'utilisation régulière d'Internet et la navigation sur les pages web par&nbsp;sois-&nbsp;même.</li>
+                  <li class="txt">Les méthodes de navigation actuelles et les difficultés rencontrées, notamment avec les boutons non-reconnus, les temps de chargement et les tremblements.</li>
+                  <li class="txt">Les idées pour améliorer l'accessibilité, y compris la prise en compte de l'accessibilité dès la conception des sites&nbsp;web.</li>
+                  <li class="txt">L'idée de normaliser la navigation par regard et son potentiel bénéfice pour les personnes ne pouvant pas utiliser une souris ou un clavier.</li>
+               </ul>
+            </div>
+         </section>
+         <section id="section8" class="section">
+            <div class="content">
+               <h2 class="title txt--centered color--blue">Conclusion</h2>
+               <p class="txt grid-column3-7">Les interviews mettent en lumière les difficultés rencontrées par les personnes atteintes de handicap lorsqu'elles naviguent sur internet et suggère des idées pour améliorer l'accessibilité des sites web.</p>
+               <p class="txt grid-column3-7">L'idée de normaliser la navigation par regard est envisagée comme une solution prometteuse pour faciliter la navigation pour les personnes ne pouvant pas utiliser une souris ou un clavier, mais nécessite encore des développements pour être concrétisée.</p>
+               <p class="txt grid-column3-7">Les principales barrières auxquelles ils sont confrontés lorsqu'ils naviguent sur internet sont liées aux problèmes de navigation, à la difficulté à utiliser les boutons, aux tremblements et au zoom.</p>
+               <p class="txt txt--bold grid-column3-7">Ils ont proposé que l'accessibilité soit prise en compte dès le début de la conception des sites web.</p>
+            </div>
+         </section>
       </main>
-      <footer class="footer centered flex-column align-center display-flex">
+      <footer class="footer txt--centered">
          <small id="date"></small>
-         <ul class="linkList display-flex">
+         <ul class="linkList ">
             <li class="linkList__el txt"><a href="ui-kit.html">UI-&nbsp;Kit</a></li>
             <li class="linkList__el txt"><a href="https://docs.google.com/document/d/10mVxYDuZsArRD1Pr_J1tL4s5tSxVnFzKBI49dZQ9nbE/edit?usp=sharing">Google Doc</a></li>
             <li class="linkList__el txt"><a href="credits.html">Credits</a></li>

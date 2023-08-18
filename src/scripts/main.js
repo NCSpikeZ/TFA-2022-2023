@@ -3,10 +3,22 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+// Bar de progression du site
+document.addEventListener('scroll', function() {
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.body.clientHeight;
+  const scrollPosition = window.scrollY;
+
+  const scrollPercentage = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+  const progressBar = document.querySelector('.progress-container_bar');
+  progressBar.style.width = scrollPercentage + '%';
+});
+
 /* Burger */
 document.addEventListener('DOMContentLoaded', initNav);
 function initNav() {
-  const burger = document.querySelector('.burger');
+  const burger = document.querySelector('.main-nav_burger');
   const nav = document.querySelector('.main-nav');
   burger.addEventListener('click', () => {
     nav.classList.toggle('show');
@@ -50,65 +62,6 @@ if (window.location.href === "https://nicolascoopman.be/projets/tfa/" || window.
 
   window.addEventListener('scroll', updateCounterOnScroll);
 
-  
-//Slider
-
-const btnPrev = document.querySelector(".slider__btn--prev"),
-btnNext = document.querySelector(".slider__btn--next"),
-arrowPrev = document.querySelector(".slider__arrow--left"),
-arrowNext = document.querySelector(".slider__arrow--right");
-
-
-btnNext.addEventListener("click", next);
-btnPrev.addEventListener("click", prev);
-arrowNext.addEventListener("click", next);
-arrowPrev.addEventListener("click", prev);
-
-function next (){
-let elShow = document.querySelector(".slider__el--show"),
-  elNext = elShow.nextElementSibling;
-
-  elShow.classList.remove("slider__el--show");
-
-  if(elNext){
-      elNext.classList.add("slider__el--show");
-  }else{
-      let elFirst = elShow.parentNode.firstElementChild;
-      elFirst.classList.add("slider__el--show");
-  }
-
-}
-
-function prev(){
-let elShow = document.querySelector(".slider__el--show"),
-  elPrev = elShow.previousElementSibling;
-
-  elShow.classList.remove("slider__el--show");
-
-  if(elPrev){
-      elPrev.classList.add("slider__el--show");
-  }else{
-      let elLast = elShow.parentNode.lastElementChild;
-      elLast.classList.add("slider__el--show");
-  }
-
-}
-
-//Touches clavier
-document.addEventListener("keydown", function(e){
-    if(e.code == "ArrowLeft"){
-        prev();
-    }else if(e.code == "ArrowRight"){
-        next();
-    }
-});
-
-// Copyright
-let year = new Date().getFullYear();
-let date = document.querySelector("#date");
-date.innerHTML = "©SpikeZ"+ String(year);
-
-
 // Menu déroulant
 
 window.onload = function() {
@@ -129,4 +82,112 @@ function toggleContenu() {
     titre.querySelector('.arrow').classList.remove('rotate-down');
   });
 }
+
+// Slider
+const slider = document.querySelector('.slider');
+const indicators = document.querySelectorAll('.indicators__indicator');
+const images = document.querySelectorAll('.slider__content');
+const leftArrow = document.querySelector('.navigation__arrow--left');
+const rightArrow = document.querySelector('.navigation__arrow--right');
+
+let currentSlide = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+
+function updateIndicators() {
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentSlide);
+  });
 }
+
+function changeSlide(index) {
+  currentSlide = (index + images.length) % images.length;
+  const translateValue = -currentSlide * 100;
+  slider.style.transform = `translateX(${translateValue}%)`;
+  updateIndicators();
+}
+
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+  if (swipeDistance > 50) {
+    changeSlide(currentSlide - 1);
+  } else if (swipeDistance < -50) {
+    changeSlide(currentSlide + 1);
+  }
+}
+
+function goToNextSlide() {
+  changeSlide(currentSlide + 1);
+}
+
+function goToPreviousSlide() {
+  changeSlide(currentSlide - 1);
+}
+
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    changeSlide(index);
+  });
+});
+
+slider.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+images.forEach((image) => {
+  image.addEventListener('click', goToNextSlide);
+});
+
+leftArrow.addEventListener('click', goToPreviousSlide);
+rightArrow.addEventListener('click', goToNextSlide);
+
+updateIndicators();
+
+//Touches clavier
+document.addEventListener("keydown", function(e){
+    if(e.code == "ArrowLeft"){
+        prev();
+    }else if(e.code == "ArrowRight"){
+        next();
+    }
+});
+
+// Copyright
+let year = new Date().getFullYear();
+let date = document.querySelector("#date");
+date.innerHTML = "©SpikeZ"+ String(year);
+}
+
+//Oeil
+
+const oeil = document.querySelector('.oeil');
+const pupille = document.querySelector('.pupille');
+
+document.addEventListener('mousemove', (event) => {
+  const oeilRect = oeil.getBoundingClientRect();
+  const oeilCenterX = oeilRect.left + oeilRect.width / 2;
+  const oeilCenterY = oeilRect.top + oeilRect.height / 2;
+
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  const deltaX = mouseX - oeilCenterX;
+  const deltaY = mouseY - oeilCenterY;
+  const angle = Math.atan2(deltaY, deltaX);
+
+  const maxDistance = oeilRect.width * 0.25;
+  const distance = Math.min(maxDistance, Math.hypot(deltaX, deltaY));
+
+  const pupilleX = oeilCenterX + distance * Math.cos(angle);
+  const pupilleY = oeilCenterY + distance * Math.sin(angle);
+
+  pupille.style.left = `${pupilleX - oeilRect.left}px`;
+  pupille.style.top = `${pupilleY - oeilRect.top}px`;
+});
+
+const nodes = document.querySelectorAll('.node');

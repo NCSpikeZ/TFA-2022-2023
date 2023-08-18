@@ -29,191 +29,177 @@
       <link rel="stylesheet" href="styles/app.css">
       <script src="scripts/main.js" defer></script>
    </head>
-   <body class="lora backgroundcolor-white color-black">
-      <header class="header__container topleft-0 zindex-high backgroundcolor-white position-fixed">
-         <nav class="main-nav width-100vw align-center display-flex">
-            <div class="burger cursor-pointer">
-               <div class="line backgroundcolor-black display-block line--1"></div>
-               <div class="line backgroundcolor-black display-block line--2"></div>
-               <div class="line backgroundcolor-black display-block line--3"></div>
+   <body>
+      <header class="header">
+         <nav class="main-nav">
+            <div class="main-nav_burger cursor--pointer">
+               <div class="main-nav_burger-line line--1"></div>
+               <div class="main-nav_burger-line line--2"></div>
+               <div class="main-nav_burger-line line--3"></div>
             </div>
-            <ul class="nav__links flex-column align-center display-flex position-fixed backgroundcolor-white txt merriweather">
-               <li class="menu-list_el"><a class="menu-itemactive txt-underline display-block centered" href="index.html">Présentation</a></li>
-               <li class="menu-list_el"><a class="menu-item opacity display-block centered" href="interviews.html">Interviews</a></li>
+            <ul class="main-nav_links">
+               <li class="main-nav_links_el"><a class="main-nav_links_el_link el_link--active" href="index.html">Présentation</a></li>
+               <li class="main-nav_links_el"><a class="main-nav_links_el_link" href="interviews.html">Interviews</a></li>
             </ul>
          </nav>
       </header>
-      <main class="main--grid">
-         <section class="intro--section">
-            <h1 class="first-title margin-bottom1x margin-leftright1x merriweather">Inclusion numérique</h1>
-            <h2 class="second-title margin-leftright1x merriweather color-grey txt-lessch">Une révolution d'opportunité</h2>
-            <a class=" hidden green-button txt-36 txt-bold" href="#scroll">On y va !</a> 
+      <div class="progress-container">
+         <div class="progress-container_bar"></div>
+      </div>
+      <main class="main main--grid">
+         <section class="introSection">
+            <h1 class="introSection_title title title--big">Inclusion numérique</h1>
+            <h2 class="introSection_subtitle title">Une révolution d'opportunité</h2>
+            <a class="hidden green-button txt--bold" href="#scroll">On y va !</a>
+            <div class="introImage-container">
+               <img class="introImage"src="assets/images/imageintro.png" alt="Plusieurs personnages se tenant l'air heureux dont plusieurs d'entres eux atteints de handicaps" srcset="assets/images/imageintro@2x.png 2x">
+            </div>
+            <div class="hidden-desktop">
+               <p class="txt txt--centered">Le web devrait être accessible à<span class="txt--bold"> tous</span></p>
+            </div>
+            <p class="txt citation">«J'espère <span class="color--red txt--bold">sensibiliser</span> les futurs webdesigners&nbsp;à&nbsp; l'importance de concevoir des sites&nbsp;web&nbsp;accessibles&nbsp;à tous&nbsp;»</p>
          </section>
-         <div class="imageintro--container imageintro--container-idx margin-top2x overflow-hidden display-flex">
-            <img src="assets/images/imageintro.png" alt="Plusieurs personnages se tenant l'air heureux dont plusieurs d'entres eux atteints de handicaps" srcset="assets/images/imageintro@2x.png 2x">
-         </div>
-         <div class="hidden-desktop">
-            <p class="txt centered margin-top3x txt-ch">Le web devrait être accessible à<span class="txt-bold"> tous</span></p>
-            <p class="second-title centered txt-bold">Swippez !</p>
-            <div class="swipe position-relative"></div>
-         </div>
-         <div id="scroll" class="grid-row2"></div>
-         <h2 class="grid-column1-5 second-title merriweather citation centered margin-leftright1x margin-top3x">«J'espère <span class="color-red txt-bold">sensibiliser</span> les futurs webdesigners&nbsp;à&nbsp; l'importance de concevoir des sites web&nbsp;accessibles&nbsp;à tous&nbsp;»</h2>
-         <img class="grid-column1 grid-row6-10 start-img redim-desktop hidden margin-top3x" src="assets/images/start.png" alt="Un homme en fauteuil roulant devant une rampe d'accessibilité pour l'aider à gravir des escaliers" srcset="assets/images/start@2x.png 2x">
-         <h2 class="grid-column2 second-title centered merriweather color-blue centered-end margin-top3x">Start !</h2>
-         <p class="txt margin-top2x grid-column2-4 margin-leftright1x">Dans le cadre de mon TFA, j’ai décidé d’aborder le thème de l'accessibilité du web pour les personnes atteintes de handicaps. Pour moi, il est primordial que le web soit accessible à tous, quelles que soient leurs capacités.</p>
-         <h2 class="second-title merriweather color-blue centered margin-top3x centered-end grid-column2-4">Accessible ?</h2>
-         <div class="txt grid-column2-4 margin-leftright1x">
-            <p class="margin-top2x">Par accessible j’entends qu’il soit utilisé et compris par tous les utilisateurs, y&nbsp;compris&nbsp;ceux ayant des capacités différentes.</p>
-            <p class="margin-top2x">C’est une pratique importante pour garantir l'inclusion numérique et l'égalité des opportunités pour tous les utilisateurs.</p>
-         </div>
-         <h2 class="second-title merriweather color-blue centered margin-top3x centered-end grid-column2-4">Le web pour tous !</h2>
-         <p class="txt margin-top2x grid-column2-4 margin-leftright1x">Ce défi est complexe, mais je suis convaincu que nous pouvons y parvenir ensemble, en travaillant de manière collaborative et en adoptant une approche axée sur l'utilisateur.</p>
-         <div class="defilement position-relative overflow-hidden margin-top3x margin-bottom3x grid-column1-6 nomargin">
-            <h1 class="first-title merriweather margin-top2x margin-bottom1x defilement-text color-white margintop-0">Design adaptatif : Une expérience fluide pour chacun.</h1>
-         </div>
-         <h2 class="second-title merriweather centered margin-top3x grid-column1-5 margin-leftright1x">«Environ 6 % de la population belge souffre d'un handicap moteur, ce qui&nbsp;représente&nbsp;plus de <span class="color-red txt-bold" id=counter>0</span>&nbsp;personnes»</h2>
-         <div class="txt grid-column1-4 margin-leftright1x">
-            <p class="txt-italic margin-bottom3x centered centered-end ">-Organisation mondiale de la santé (OMS)</p>
-            <p class="margin-top3x">Ces personnes peuvent rencontrer des difficultés à naviguer sur le web en raison de leur handicap, ce qui peut les priver d'un accès à des informations <span class="color-red txt-bold">vitales</span>, à des services en ligne et à des opportunités économiques et sociales. En garantissant que le web soit accessible à tous, nous pouvons aider à briser les barrières pour les personnes atteintes de handicaps moteurs en Belgique et <span class="color-red txt-bold"> améliorer leur qualité de vie.</span></p>
-         </div>
-         <h2 class="second-title merriweather color-blue centered margin-top3x grid-column2-4 centered-end">Prise de contact</h2>
-         <div class="grid-column2-4 margin-leftright1x txt">
-            <p class="margin-top2x">Lorsque j'ai commencé à réfléchir à mon TFA sur l'accessibilité du web pour les personnes atteintes de handicaps, j'ai rapidement réalisé que <span class= "txt-bold">je ne pourrais pas y arriver seul.</span> J'ai donc commencé à chercher des associations ou des organisations dans la région de Namur qui travaillent sur ce sujet.  </p>
-            <p class="margin-top2x">C'est ainsi que j'ai découvert l'ASBL «ARAPH», <span class= "txt-bold"> l'Association Régionale d'Aide aux Personnes Handicapées. </span> Cette organisation est engagée dans l'aide et l'accompagnement des personnes atteintes de handicaps en leur fournissant des services de qualité adaptés à leurs besoins spécifiques.</p>
-            <p class="margin-top2x">Ceux-ci m'ont aussi permis d’entrer en contact avec des porteurs de handicaps afin de réaliser plusieurs interviews dont j’ai pu tirer beaucoup de conclusions intéressantes.</p>
-         </div>
-         <img class="araph--logo display-block margin-top2x grid-column1 grid-row13-15 margin-topspec" src="assets/images/logoaraph.png" alt="Logo de l'ASBL «ARAPH»" srcset="assets/images/logoaraph@2x.png 2x">
-         <p class="txt margin-top3x margin-bottom1x grid-column1-3 margin-leftright1x margin-topspec"><span class="color-red txt-bold">En résumé, </span>les principales barrières auxquelles les personnes atteintes de handicaps sont confrontés lorsqu'ils naviguent sur internet sont liées aux problèmes de navigation, à la difficulté à utiliser les boutons, aux tremblements et au zoom. Ils ont proposé que l'accessibilité soit prise en compte dès le début de la conception des sites web.</p>
-         <a href="https://nicolascoopman.be/projets/tfa/interviews" class="txt margin-leftright1x txt-bold txt-underline txt-inlineblock grid-column1-4 margin-top3x lien">Retrouvez l’ensemble des mes interviews et leur conclusion&nbsp;ici</a>
-         <h2 class="second-title merriweather color-blue centered margin-top3x grid-column1 centered-end">Solutions</h2>
-         <p class="txt margin-top2x margin-leftright1x grid-column1-4">Après réflexion, il m'est venu 3 solutions, 3 pistes que je me devais d’explorer :</p>
-         <div class="grid-column2-4 txt margin-leftright1x">
-            <p class="margin-top2x txt-bold">Proposer une navigation simplifiée</p>
-            <p class="margin-top2x">Une navigation simple et intuitive facilite l'accès aux informations pour les personnes ayant des handicaps moteurs. Il est important de proposer une navigation claire, facile à comprendre et cohérente sur toutes les pages du site web. Par exemple fournir un service créant des variantes des sites accessibles aux personnes atteintes de handicaps </p>
-            <p class="margin-top2x txt-bold">Proposer des alternatives à la souris</p>
-            <p class="margin-top2x">Pour les personnes ayant des difficultés à utiliser une souris, il est important de proposer des alternatives telles que la navigation au clavier, les raccourcis clavier et les gestes tactiles pour les écrans tactiles.</p>
-            <p class="margin-top2x txt-bold">Coder un site de <span class="color-red"> manière accessible et éducative</span>  avec plusieurs outils permettant la mise en situation d’un utilisateur dans la peau d’un porteur de handicap.</p>
-            <p class="margin-top2x">Pour améliorer le quotidien de ceux-ci, la première étape serait de sensibiliser l'entièreté du corps de métier à leur situation.</p>
-         </div>
-         <img class="img-tel margin-top2x margin-leftright1x grid-column1 redim-desktop grid-row19" src="assets/images/imageidee.png" alt="Des personnages souriant construisant une ampoule, signifiant une idée" srcset="assets/images/imageidee@2x.png 2x">
-         <section class="backgroundcolor-blue width-100vw margin-top3x grid-column1-6 nomargin">
-            <h2 class="second-title merriweather color-white centered centered-end padding-top3x margin-left500">Solution choisie</h2>
-            <div class="txt margin-leftright1x color-white margin-left100">
-               <p class="margin-top2x">Parmi les 3 solutions trouvées, celle que j'ai choisie d'explorer est la création d'un site web à la fois accessible et éducatif, que je pourrai montrer à des élèves de web-design et/ou à des professionnels. 
-               <p class="margin-top2x">Le site servira de passerelle entre les ASBL et les développeurs.</p>
-               <p class="margin-top2x">Pour y parvenir, j'ai décidé d'utiliser plusieurs outils qui permettront aux utilisateurs de se mettre dans la peau d'une personne en situation de handicap. </p>
-               <p class="margin-top2x">Je compte ainsi intégrer un bouton simulant les tremblements et des options de navigation alternatives, telles que la navigation par la touche TAB. </p>
-               <p class="margin-top2x padding-bottom3x">Mon <span class="txt-bold">objectif</span> est de sensibiliser les futurs concepteurs de sites web à l'importance de la conception de sites accessibles pour tous, et ainsi contribuer à une meilleure inclusion des personnes en situation de handicap sur le web.</p>
+         <section id="section1" class="section">
+            <div class="content">
+               <h2 id="scroll" class="title color--blue txt--centered">Start !</h2>
+               <h3 class="title title--small txt--right color--blue">Contexte</h3>
+               <p class="txt txt--right">Dans le cadre de mon travail de fin d'année, j’ai décidé d’aborder le thème de l'accessibilité du web pour les personnes atteintes de handicaps. Pour moi, il est primordial que le web soit accessible à tous, quelles que soient leurs capacités.</p>
+               <img class="image image-chaise hidden" src="assets/images/start.png" alt="Un homme en fauteuil roulant devant une rampe d'accessibilité pour l'aider à gravir des escaliers" srcset="assets/images/start@2x.png 2x">
+               <h3 class="title title--small txt--right color--blue">Accessible ?</h3>
+               <p class="txt txt--right">Par accessible j’entends qu’il soit utilisé et compris par tous les utilisateurs, y&nbsp;compris&nbsp;ceux ayant des capacités différentes.</p>
+               <p class="txt txt--right txt--highlight">C’est une pratique importante pour garantir l'inclusion numérique et l'égalité des opportunités pour tous les utilisateurs.</p>
+               <h3 class="title title--small color--blue">Le web pour tous !</h3>
+               <p class="txt txt--widther">Ce défi est complexe, mais je suis convaincu que nous pouvons y parvenir ensemble, en travaillant de manière collaborative et en adoptant une approche axée sur l'utilisateur.</p>
             </div>
          </section>
-         <h2 class="second-title merriweather color-blue centered margin-top3x grid-column1 centered-end margin-leftright1x centered-end">Les modules</h2>
-         <p class="txt margin-top2x grid-column1-4 margin-leftright1x">Comme dit précédemment, ce site devra permettre la mise en situation des utilisateurs dans la peau d’un porteur de handicaps. Pour se faire, plusieurs fonctionnalités seront disponibles.</p>
-         <div class="grid-column1">
-            <div class="shaking-button modules-width border-solid borderradius-4 margin-top2x margin-leftright1x centered padding-button margin-leftright1x">Bouton simulant les tremblements :</div>
-            <p class="txt txt-modules margin-top2x margin-leftright1x">Un bouton permettra aux utilisateurs de simuler les tremblements qui peuvent affecter les personnes atteintes de maladies telles que la maladie de Parkinson. Cela aiderait les utilisateurs à comprendre les défis de la navigation pour ces personnes.</p>
-            <div class="press-button backgroundcolor-white modules-width border-solid borderradius-4 margin-leftright1x margin-top2x centered padding-button margin-leftright1x">Navigation par raccourci clavier&nbsp;:</div>
-            <p class="txt margin-top2x txt-modules margin-leftright1x">Cette fonctionnalité permettra aux utilisateurs de naviguer sur le site à l'aide de la touche TAB plutôt qu'à la souris et permettra aussi l'accès à ses fonctions principales par le biais d'access key.</p>
+         <div class="defilement-container">
+            <h1 class="title defilement-text">Design adaptatif : Une expérience fluide pour chacun.</h1>
          </div>
-         <div class="margin-left grid-column2-4">
-            <p class="txt margin-top2x enlarge-text centered border-solid borderradius-4 modules-width padding-button margin-leftright1x">Texte agrandi :</p>
-            <p class="txt margin-top2x txt-modules margin-leftright1x">Ce module permettrait aux utilisateurs de modifier la taille du texte sur le site, ce qui serait particulièrement utile pour les personnes atteintes de troubles visuels ou de dyslexie.</p>
-            <div class="position-relative border-solid borderradius-4 margin-leftright1x margin-top2x modules-width centered padding-button margin-leftright1x shine">Navigation claire et organisée :</div>
-            <p class="txt margin-top2x margin-leftright1x txt-modules">Le site devrait également être organisé de manière claire et logique afin de faciliter la navigation pour tous les utilisateurs. Les techniques de hiérarchisation du contenu et d'architecture d'information pourraient être utilisées pour faciliter la navigation.</p>
-         </div>
-         <img class="img-tel margin-top2x grid-column1 grid-row27 margin-leftright1x hidden-desktop" src="assets/images/module@2x.png" alt="Illustration d'une main tenant un engrenage" srcset="assets/images/module@2x.png 2x">
-         <section class="backgroundcolor-blue width-100vw margin-top3x grid-column1-6 nomargin">
-            <h2 class="second-title merriweather color-white centered centered-end margin-left500 padding-top3x">Préparation à l'oral</h2>
-            <p class="txt margin-top2x margin-leftright1x color-white margin-left100">Ma présentation orale sera divisée en plusieurs parties, chacune avec leur représentation visuelle par le biais d’un PowerPoint :</p>
-            <div class="slider position-relative margin-top2x margin-leftright1x margin-left100">
-               <div class="grid">
-                  <ul class="slider__controls">
-                     <li class="slider__btn slider__controls backgroundcolor-white slider__btn--prev grid-row3">
-                        <button class="lora cursor-pointer txt">Précédant</button>
-                     </li>
-                     <li class="slider__btn slider__controls backgroundcolor-white slider__btn--next grid-row3 margin-left20">
-                        <button class="lora cursor-pointer txt">Suivant</button>
-                     </li>
-                  </ul>
+         <section id="section2" class="section">
+            <div class="content">
+               <h2 class="title title--small txt--centered">«Environ 6 % de la population belge souffre d'un handicap moteur, ce qui&nbsp;représente&nbsp;plus de <span class="color--red txt--bold" id=counter>0</span>&nbsp;personnes»</h2>
+               <p class="txt txt--italic txt--centered grid-column4-7">-Organisation mondiale de la santé (OMS)</p>
+               <p class="txt txt--widther">Ces personnes peuvent rencontrer des difficultés à naviguer sur le web en raison de leur handicap, ce qui peut les priver d'un accès à des informations <span class="color--red txt--bold">vitales</span>, à des services en ligne et à des opportunités économiques et sociales. En garantissant que le web soit accessible à tous, nous pouvons aider à briser les barrières pour les personnes atteintes de handicaps moteurs en Belgique et <span class="color--red txt--bold"> améliorer leur qualité de vie.</span></p>
+               <h2 class="title txt--centered color--blue"> Prise de contact</h2>
+               <h3 class="title title--small color--blue">ARAPH</h3>
+               <p class="txt">Lorsque j'ai commencé à réfléchir à mon TFA sur l'accessibilité du web pour les personnes atteintes de handicaps, j'ai rapidement réalisé que <span class= "txt--bold">je ne pourrais pas y arriver seul.</span> J'ai donc commencé à chercher des associations ou des organisations dans la région de Namur qui travaillent sur ce sujet.  </p>
+               <p class="txt">C'est ainsi que j'ai découvert l'ASBL «ARAPH», <span class= "txt--bold"> l'Association Régionale d'Aide aux Personnes Handicapées. </span> Cette organisation est engagée dans l'aide et l'accompagnement des personnes atteintes de handicaps en leur fournissant des services de qualité adaptés à leurs besoins spécifiques.</p>
+               <p class="txt">Ceux-ci m'ont aussi permis d’entrer en contact avec des porteurs de handicaps afin de réaliser plusieurs interviews dont j’ai pu tirer beaucoup de conclusions intéressantes.</p>
+               <img class="image image-araph" src="assets/images/logoaraph.png" alt="Logo de l'ASBL «ARAPH»" srcset="assets/images/logoaraph@2x.png 2x">
+               <p class="txt txt--right txt--highlight"><span class="color--red txt--bold">En résumé, </span>les principales barrières auxquelles les personnes atteintes de handicaps sont confrontés lorsqu'ils naviguent sur internet sont liées aux problèmes de navigation, à la difficulté à utiliser les boutons, aux tremblements et au zoom. Ils ont proposé que l'accessibilité soit prise en compte dès le début de la conception des sites web.</p>
+               <a href="https://nicolascoopman.be/projets/tfa/interviews" class="txt txt--bold txt--underline lien txt--right">Retrouvez l’ensemble des mes interviews et leur conclusion&nbsp;ici</a>
+               <h2 class="title color--blue txt--centered">Solutions</h2>
+               <p class="txt txt--widther">Après réflexion, il m'est venu 3 solutions, 3 pistes que je me devais d’explorer :</p>
+               <p class="txt txt--bold txt">Proposer une navigation simplifiée</p>
+               <p class="txt">Une navigation simple et intuitive facilite l'accès aux informations pour les personnes ayant des handicaps moteurs.</p>
+               <p class="txt">Il est important de proposer une navigation claire, facile à comprendre et cohérente sur toutes les pages du site web. Par exemple fournir un service créant des variantes des sites accessibles aux personnes atteintes de handicaps </p>
+               <p class="txt txt--bold">Proposer des alternatives à la souris</p>
+               <p class="txt">Pour les personnes ayant des difficultés à utiliser une souris, il est important de proposer des alternatives telles que la navigation au clavier, les raccourcis clavier et les gestes tactiles pour les écrans tactiles.</p>
+               <p class="txt">Au début de mon projet j'avais d'ailleurs explorer la piste de <span class="txt--bold">l'eye tracking,</span> une technologie permettant auxs utilisateurs de naviguer grâce à leur regards.</p>
+               <div class="oeil">
+                  <div class="pupille"></div>
                </div>
-               <ul class="slider__list">
-                  <li class="grid slider__el slider__el--show">
-                     <div class="slider__content padding-40">
-                        <h2 class="second-title color-white txt-bold">1.Introduction</h2>
-                        <p class="txt margin-top2x color-white">Présentation du projet en expliquant son objectif, c'est-à-dire améliorer l'accessibilité des sites web pour les personnes en situation de handicap.</p>
-                     </div>
-                  </li>
-                  <li class="grid slider__el">
-                     <div class="slider__content padding-40">
-                        <h2 class="second-title color-white txt-bold">2. Les expériences et&nbsp;rencontres :</h2>
-                        <p class="txt margin-top2x color-white">Explication de comment le projet a été inspiré par les expériences et rencontres avec des personnes en situation de handicap.</p>
-                     </div>
-                  </li>
-                  <li class="grid slider__el">
-                     <div class="slider__content padding-40">
-                        <h2 class="second-title color-white txt-bold">3. Les problèmes de navigation :</h2>
-                        <p class="txt margin-top2x color-white"> Mise en avant des difficultés spécifiques que les personnes en situation de handicap peuvent rencontrer lors de la navigation sur les sites web.</p>
-                     </div>
-                  </li>
-                  <li class="grid slider__el">
-                     <div class="slider__content padding-40">
-                        <h2 class="second-title color-white txt-bold">4. Le manque de considération :</h2>
-                        <p class="txt margin-top2x color-white"> Mise en avant des difficultés spécifiques que les personnes en situation de handicap peuvent rencontrer lors de la navigation sur les sites web.</p>
-                     </div>
-                  </li>
-                  <li class="grid slider__el">
-                     <div class="slider__content padding-40">
-                        <h2 class="second-title color-white txt-bold">5. Le manque de sensibilisation&nbsp;:</h2>
-                        <p class="txt margin-top2x color-white"> Souligne que le manque de sensibilisation sur ces questions est un obstacle majeur à l'amélioration de l'accessibilité des sites web.</p>
-                     </div>
-                  </li>
-                  <li class="grid slider__el">
-                     <div class="slider__content padding-40">
-                        <h2 class="second-title color-white txt-bold">6. Les solutions&nbsp;proposées&nbsp;:</h2>
-                        <p class="txt margin-top2x color-white"> Présentation de la solution choisie et explication du comment ma solution résoudra efficacement la situation.</p>
-                     </div>
-                  </li>
-                  <li class="grid slider__el">
-                     <div class="slider__content padding-40">
-                        <h2 class="second-title color-white txt-bold">7. La mentalité derrière&nbsp;la&nbsp;conception&nbsp;:</h2>
-                        <p class="txt margin-top2x color-white"> Appui sur l'importance de la prise en compte des besoins spécifiques des personnes en situation de handicap dans la conception des sites web, et sur la nécessité de sensibiliser les créateurs de sites web à ces questions.</p>
-                     </div>
-                  </li>
-                  <li class="grid slider__el">
-                     <div class="slider__content padding-40">
-                        <h2 class="second-title color-white txt-bold">8. Conclusion :</h2>
-                        <p class="txt margin-top2x color-white">Résumez des points clés de la présentation, en soulignant l'importance de l'accessibilité des sites web pour les personnes en situation de handicap, et en encourageant les professeurs et élèves à prendre en compte ces besoins dans leurs projets futurs.</p>
-                     </div>
-                  </li>
-               </ul>
-               <div class="slider__arrows space-between display-flex">
-                  <div class="slider__arrow cursor-pointer align-center backgroundcolor-white slider__arrow--left display-flex cursor-pointer">
-                     <svg width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/>
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                     </svg>
+               <p class="txt txt--bold txt--highlight txt--right">Coder un site de <span class="color--red"> manière accessible et éducative</span>  avec plusieurs outils permettant la mise en situation d’un utilisateur dans la peau d’un porteur de handicap.</p>
+               <p class="txt">Pour améliorer le quotidien de ceux-ci, la première étape serait de sensibiliser l'entièreté du corps de métier à leur situation.</p>
+            </div>
+         </section>
+         <section id="section3" class="section backgroundcolor--blue color--white">
+            <div class="content">
+               <h2 class="title txt--centered grid-column3-7">Solution choisie</h2>
+               <h3 class="title title--small grid-column3-7">Créons un site !</h3>
+               <p class="txt grid-column3-7">Parmi les 3 solutions trouvées, celle que j'ai choisie d'explorer est la création d'un site web à la fois accessible et éducatif, que je pourrai montrer à des élèves de web-design et/ou à des professionnels. 
+               <p class="txt grid-column3-7">Le site servira de passerelle entre les ASBL et les développeurs.</p>
+               <h3 class="title title--small grid-column3-7">Des outils</h3>
+               <p class="txt grid-column3-7">Pour y parvenir, j'ai décidé d'utiliser plusieurs outils qui permettront aux utilisateurs de se mettre dans la peau d'une personne en situation de handicap. </p>
+               <p class="txt grid-column3-7">Je compte ainsi intégrer un bouton simulant les tremblements et des options de navigation alternatives, telles que la navigation par la touche TAB. </p>
+               <p class="txt txt--highlight grid-column3-7">Mon <span class="txt--bold">objectif</span> est de sensibiliser les futurs concepteurs de sites web à l'importance de la conception de sites accessibles pour tous, et ainsi contribuer à une meilleure inclusion des personnes en situation de handicap sur le web.</p>
+            </div>
+         </section>
+         <section id="section4" class="section">
+            <div class="content">
+               <h2 class="title color--blue txt--centered">Les modules</h2>
+               <p class="txt">Comme dit précédemment, ce site devra permettre la mise en situation des utilisateurs dans la peau d’un porteur de handicaps. Pour se faire, plusieurs fonctionnalités seront disponibles.</p>
+               <p class="button shaking-button txt--centered">Bouton simulant les tremblements :</p>
+               <p class="txt">Un bouton permettra aux utilisateurs de simuler les tremblements qui peuvent affecter les personnes atteintes de maladies telles que la maladie de Parkinson. Cela aiderait les utilisateurs à comprendre les défis de la navigation pour ces personnes.</p>
+               <p class="button press-button txt--centered grid-column6-10 grid-row3">Navigation par raccourci clavier&nbsp;:</p>
+               <p class="txt grid-column6-10">Cette fonctionnalité permettra aux utilisateurs de naviguer sur le site à l'aide de la touche TAB plutôt qu'à la souris et permettra aussi l'accès à ses fonctions principales par le biais d'access key.</p>
+               <p class="txt button enlarge-text txt--centered">Texte agrandi :</p>
+               <p class="txt">Ce module permettrait aux utilisateurs de modifier la taille du texte sur le site, ce qui serait particulièrement utile pour les personnes atteintes de troubles visuels ou de dyslexie.</p>
+               <p class="button shine txt--centered grid-column6-10 grid-row5">Navigation claire et organisée :</p>
+               <p class="txt grid-column6-10">Le site devrait également être organisé de manière claire et logique afin de faciliter la navigation pour tous les utilisateurs. Les techniques de hiérarchisation du contenu et d'architecture d'information pourraient être utilisées pour faciliter la navigation.</p>
+               <img class="image" src="assets/images/module@2x.png" alt="Illustration d'une main tenant un engrenage" srcset="assets/images/module@2x.png 2x">
+            </div>
+         </section>
+         <section id="section5" class="section">
+            <div class="content">
+               <h2 class="title txt--centered color--blue">Préparation à l'oral</h2>
+               <p class="txt">Ma présentation orale sera divisée en plusieurs parties, chacune avec leur représentation visuelle par le biais d’un PowerPoint :</p>
+               <a href="https://docs.google.com/presentation/d/1R_iR4b3hsA9aRRK_35uQl-Bwlr88W3nYYsobDpyxtOg/edit?usp=sharing" class="txt txt--bold txt--underline">Retrouvez un accés à&nbsp;mon PowerPoint ici&nbsp;</a>
+            </div>
+            <div class="slider-container txt">
+               <div class="slider">
+                  <div class="slider__content">
+                     <h2 class="title txt--bold">1.Introduction</h2>
+                     <p class="txt">Présentation du projet en expliquant son objectif, c'est-à-dire améliorer l'accessibilité des sites web pour les personnes en situation de handicap.</p>
                   </div>
-                  <div class="slider__arrow cursor-pointer align-center backgroundcolor-white slider__arrow--right display-flex cursor-pointer">
-                     <svg width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12l-4.58 4.59z"/>
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                     </svg>
+                  <div class="slider__content">
+                     <h2 class="title txt--bold">2. Les expériences et&nbsp;rencontres</h2>
+                     <p class="txt">Explication de comment le projet a été inspiré par les expériences et rencontres avec des personnes en situation de handicap.</p>
                   </div>
+                  <div class="slider__content">
+                     <h2 class="title txt--bold">3. Les problèmes de navigation :</h2>
+                     <p class="txt">Mise en avant des difficultés spécifiques que les personnes en situation de handicap peuvent rencontrer lors de la navigation sur les sites web.</p>
+                  </div>
+                  <div class="slider__content">
+                     <h2 class="title txt--bold">4. Le manque de considération :</h2>
+                     <p class="txt"> Mise en avant des difficultés spécifiques que les personnes en situation de handicap peuvent rencontrer lors de la navigation sur les sites web.</p>
+                  </div>
+                  <div class="slider__content">
+                     <h2 class="title txt--bold">5. Le manque de sensibilisation&nbsp;:</h2>
+                     <p class="txt"> Souligne que le manque de sensibilisation sur ces questions est un obstacle majeur à l'amélioration de l'accessibilité des sites web.</p>
+                  </div>
+                  <div class="slider__content">
+                     <h2 class="title txt--bold">6. Les solutions&nbsp;proposées&nbsp;:</h2>
+                     <p class="txt"> Présentation de la solution choisie et explication du comment ma solution résoudra efficacement la situation.</p>
+                  </div>
+                  <div class="slider__content">
+                     <h2 class="title txt--bold">7. La mentalité derrière&nbsp;la&nbsp;conception&nbsp;:</h2>
+                     <p class="txt"> Appui sur l'importance de la prise en compte des besoins spécifiques des personnes en situation de handicap dans la conception des sites web, et sur la nécessité de sensibiliser les créateurs de sites web à ces questions.</p>
+                  </div>
+                  <div class="slider__content">
+                     <h2 class="title txt--bold">8. Conclusion :</h2>
+                     <p class="txt">Résumez des points clés de la présentation, en soulignant l'importance de l'accessibilité des sites web pour les personnes en situation de handicap, et en encourageant les professeurs et élèves à prendre en compte ces besoins dans leurs projets futurs.</p>
+                  </div>
+               </div>
+               <div class="navigation">
+                  <div class="navigation__arrow navigation__arrow--left">&larr;</div>
+                  <div class="navigation__arrow navigation__arrow--right">&rarr;</div>
+               </div>
+               <div class="indicators">
+                  <div class="indicators__indicator active" data-slide="0"></div>
+                  <div class="indicators__indicator" data-slide="1"></div>
+                  <div class="indicators__indicator" data-slide="2"></div>
+                  <div class="indicators__indicator" data-slide="3"></div>
+                  <div class="indicators__indicator" data-slide="4"></div>
+                  <div class="indicators__indicator" data-slide="5"></div>
+                  <div class="indicators__indicator" data-slide="6"></div>
+                  <div class="indicators__indicator" data-slide="7"></div>
                </div>
             </div>
-            <a href="https://docs.google.com/presentation/d/1R_iR4b3hsA9aRRK_35uQl-Bwlr88W3nYYsobDpyxtOg/edit?usp=sharing" class="txt txt-bold txt-underline txt-inlineblock color-white lien margin-leftright1x margin-bottom3x margin-top2x margin-left100">Retrouvez un accés à&nbsp;mon PowerPoint ici&nbsp;</a>
          </section>
-         <div class="margin-leftright1x grid-column1-4 txt margin-left50">
-            <h2 class="second-title merriweather color-blue centered centered-end margin-top3x grid-column1-4">Conclusion</h2>
-            <p class="margin-top2x">En créant des sites web accessibles et pédagogiques, j’espère sensibiliser les futurs webdesigners à l’importance de concevoir des sites web accessibles à tous, y compris aux personnes en situation de handicap.</p>
-            <p class="margin-top2x">La navigation sur le web doit être accessible à tous et j'espère que ce site internet contribuera à une meilleure inclusion de ces personnes en ligne</p>
-            <p class="margin-top2x margin-bottom3x">En utilisant les outils et fonctionnalités que j'ai intégrés, j'espère que les utilisateurs seront en mesure de comprendre les défis auxquels sont confrontées les porteurs de handicaps et comment ils peuvent être surmontés grâce à des techniques appropriées de hiérarchisation et d'organisation du contenu.</p>
-            <iframe class="video__container" src="https://www.youtube.com/embed/0pZhJmGQmY4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-         </div>
+         <section id="section6" class="section">
+            <div class="content">
+               <h2 class="title color--blue txt--centered">Conclusion</h2>
+               <p class="txt grid-column3-7">En créant des sites web accessibles et pédagogiques, j’espère sensibiliser les futurs webdesigners à l’importance de concevoir des sites web accessibles à tous, y compris aux personnes en situation de handicap.</p>
+               <p class="txt grid-column3-7 txt--highlight">La navigation sur le web doit être accessible à tous et j'espère que ce site internet contribuera à une meilleure inclusion de ces personnes en ligne</p>
+               <p class="txt grid-column3-7">En utilisant les outils et fonctionnalités que j'ai intégrés, j'espère que les utilisateurs seront en mesure de comprendre les défis auxquels sont confrontées les porteurs de handicaps et comment ils peuvent être surmontés grâce à des techniques appropriées de hiérarchisation et d'organisation du contenu.</p>
+               <iframe class="video__container grid-column4-7" src="https://www.youtube.com/embed/0pZhJmGQmY4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+         </section>
       </main>
-      <footer class="footer centered flex-column align-center display-flex">
+      <footer class="footer txt--centered">
          <small class="copyright" id="date"></small>
-         <ul class="linkList display-flex">
+         <ul class="linkList">
             <li class="linkList__el txt"><a href="ui-kit.html">UI-&nbsp;Kit</a></li>
             <li class="linkList__el txt"><a href="https://docs.google.com/document/d/10mVxYDuZsArRD1Pr_J1tL4s5tSxVnFzKBI49dZQ9nbE/edit?usp=sharing">Google Doc</a></li>
             <li class="linkList__el txt"><a href="credits.html">Credits</a></li>

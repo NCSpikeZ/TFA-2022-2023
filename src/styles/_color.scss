@@ -1,75 +1,34 @@
-:root { 
-  --color-bg: #FFF8F8;
-  --color-bg-offset: #181818;
-  --color-text: #000000;
-  --color-text-offset: #002D72;
-  --color-text-third: #525252;
-  --color-text-fourth: #72002D;
-  --color-bg-third: #2D7200;
-}
-
-.color-black {
-  color: var(--color-text);
-}
-
-.color-green {
-  color: var(--color-bg-third);
-}
-
-.color-grey {
-  color: var(--color-text-third);
-}
-
-.color-red {
-  color: var(--color-text-fourth);
-}
-
-.color-blue {
-  color: var(--color-text-offset);
-}
-
-.color-white {
-  color: var(--color-bg);
-}
-
-.backgroundcolor-blue{
-  background-color: var(--color-text-offset);
-}
-
-.backgroundcolor-white {
-  background-color: var(--color-bg);
-}
-
-.backgroundcolor-black {
-  background-color: var(--color-text);
-}
-
-.backgroundcolor-red {
-  background-color: var(--color-text-fourth);
-}
-
-.backgroundcolor-green {
-  background-color: var(--color-bg-third);
-}
-
-.footer a:hover {
-  color: var(--color-text-offset);
-  text-decoration: underline;
-}
-
-.green-button {
-  background-color: var(--color-bg-third);
-}
-
-.visited{
-  color: red;
-}
-
-.line {
-  fill: #000000; 
-}
-
-.slider__arrow:hover {
-  background-color: #eaeaea;
-}
-
+:root {
+  --color-bg:#FFF8F8;
+  --color-bg-offset:#181818;
+  --color-text:#000;
+  --color-text-offset:#002D72;
+  --color-text-third:#525252;
+  --color-text-fourth:#72002D;
+  --color-bg-third:#2D7200
+  }
+  
+  .color--blue {
+  color:var(--color-text-offset)
+  }
+  
+  .backgroundcolor--blue {
+  background-color:var(--color-text-offset)
+  }
+  
+  .color--white {
+  color:var(--color-bg)
+  }
+  
+  .color--red {
+  color:var(--color-text-fourth)
+  }
+  
+  .footer a:hover {
+  color:var(--color-text-offset);
+  text-decoration:underline
+  }
+  
+  .green-button {
+  background-color:var(--color-bg-third)
+  }

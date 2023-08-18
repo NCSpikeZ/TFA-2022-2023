@@ -34,10 +34,10 @@
   //Defilement
   .defilement-text {
   white-space:nowrap;
-  -webkit-animation:scrollText 6s linear infinite;
-  animation:scrollText 6s linear infinite;
-  -webkit-animation-delay:.3s;
-  animation-delay:.3s;
+  -webkit-animation:scrollText 8s linear infinite;
+  animation:scrollText 8s linear infinite;
+  -webkit-animation-delay:.1s;
+  animation-delay:.1s;
   color:var(--color-bg)
   }
   

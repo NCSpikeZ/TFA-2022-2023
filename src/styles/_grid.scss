@@ -14,7 +14,8 @@
   border-width:2px;
   border-radius:5px;
   padding:10px 20px;
-  grid-column:1/5
+  grid-column:1/5;
+  margin-bottom: initial;
   }
   
   .introSection {
@@ -55,11 +56,15 @@
   
   .navigation__arrow {
   background-color:var(--color-bg);
-  border-radius:5px;
+  border-radius:100%;
   color:#000;
   cursor:pointer;
   font-size:20px;
   padding:2px
+  }
+
+  .navigation__arrow:hover {
+  scale: 1.2;
   }
   
   .navigation__arrow--left {

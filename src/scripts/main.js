@@ -23,25 +23,32 @@ function initNav() {
   const nav = document.querySelector('.main-nav');
   burger.addEventListener('click', () => {
     nav.classList.toggle('show');
+    if (nav.classList.contains('show')) {
+      document.documentElement.style.overflowY = 'hidden';
+    } else {
+      document.documentElement.style.overflowY = 'auto';
+    }
   });
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const burgerMenu = document.querySelector(".main-nav");
   const menuLinks = document.querySelectorAll(".main-nav_links_el_link");
 
   menuLinks.forEach(link => {
-      link.addEventListener("click", () => {
-          burgerMenu.classList.remove("show");
-      });
+    link.addEventListener("click", () => {
+      burgerMenu.classList.remove("show");
+      document.documentElement.style.overflowY = 'auto';
+    });
   });
 });
-
 
 //Animation
 AOS.init();
 
 //Seulement index.html
 if (window.location.href === "https://nicolascoopman.be/projets/tfaaout/" || window.location.href === "https://nicolascoopman.be/projets/tfaaout/#scroll" || window.location.href === "https://nicolascoopman.be/projets/tfaaout/index.html" || window.location.href === "https://nicolascoopman.be/projets/tfaaout/index.html#scroll" || window.location.href === "http://nicolascoopman.be/projets/tfaaout/" || window.location.href === "http://nicolascoopman.be/projets/tfaaout/index.html" ||window.location.href === "http://nicolascoopman.be/projets/tfaaout/#scroll " || window.location.href === "http://nicolascoopman.be/projets/tfaaout/index.html#scroll" || window.location.pathname === "/index.html") {
+
 //Compteur 
   const counterElement = document.getElementById("counter");
   const targetCount = 660000;
@@ -75,7 +82,7 @@ if (window.location.href === "https://nicolascoopman.be/projets/tfaaout/" || win
       }
   }
 
-  //Oeil
+//Oeil
 
 const oeil = document.querySelector('.oeil');
 const pupille = document.querySelector('.pupille');

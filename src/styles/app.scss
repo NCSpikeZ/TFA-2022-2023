@@ -15,7 +15,7 @@ text-decoration:none
 
 .html {
 overflow-x:hidden;
-scroll-behavior:smooth
+scroll-behavior:smooth;
 }
 
 main {
@@ -117,7 +117,8 @@ transition: opacity 1.5s ease-in-out;
     }
 
 .el_link--active {
-text-decoration:underline
+text-decoration:underline;
+pointer-events: none;
 }
 
 //Footer

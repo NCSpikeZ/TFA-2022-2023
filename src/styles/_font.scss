@@ -54,6 +54,20 @@ white-space:pre-line
 font-size:13.5px
 }
 
+.lien {
+    text-decoration:underline
+    }
+    
+    .lien:visited {
+    opacity:.7;
+    text-decoration:line-through
+    }
+    
+    .lien:hover {
+    text-decoration:overline
+    }
+    
+
 .txt--italic {
 font-style:italic;
 font-weight:lighter
@@ -78,3 +92,38 @@ text-decoration:overline
 .menu-list_el:hover {
 text-decoration:overline
 }
+
+.citation {
+    margin-bottom:90px;
+    margin-top:90px;
+    text-align:center
+    }
+
+    .title--small {
+        font-size:18px
+        }
+        
+        .txt--highlight {
+        border-left:12px solid var(--color-text-fourth);
+        padding-left:12px
+        }
+
+
+
+@media (min-width: 860px) {
+    body {
+        font-size:18px
+}
+.title {
+    font-size:36px
+    }
+    
+    .title--big {
+    font-size:72px
+    }
+    
+    .title--small {
+    font-size:24px
+    }
+}
+    

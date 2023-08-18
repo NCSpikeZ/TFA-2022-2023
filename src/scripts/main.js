@@ -1,6 +1,7 @@
 "use strict";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AOS from "aos";
 gsap.registerPlugin(ScrollTrigger);
 
 // Bar de progression du site
@@ -25,8 +26,11 @@ function initNav() {
   });
 }
 
+//Animation
+AOS.init();
+
 //Seulement index.html
-if (window.location.href === "https://nicolascoopman.be/projets/tfa/" || window.location.href === "https://nicolascoopman.be/projets/tfa/index.html" || window.location.href === "http://nicolascoopman.be/projets/tfa/" || window.location.href === "http://nicolascoopman.be/projets/tfa/index.html" || window.location.pathname === "/index.html") {
+if (window.location.href === "https://nicolascoopman.be/projets/tfaaout/" || window.location.href === "https://nicolascoopman.be/projets/tfaaout/#scroll" || window.location.href === "https://nicolascoopman.be/projets/tfaaout/index.html" || window.location.href === "https://nicolascoopman.be/projets/tfaaout/index.html#scroll" || window.location.href === "http://nicolascoopman.be/projets/tfaaout/" || window.location.href === "http://nicolascoopman.be/projets/tfaaout/index.html" ||window.location.href === "http://nicolascoopman.be/projets/tfaaout/#scroll " || window.location.href === "http://nicolascoopman.be/projets/tfaaout/index.html#scroll" || window.location.pathname === "/index.html") {
 //Compteur 
   const counterElement = document.getElementById("counter");
   const targetCount = 660000;
@@ -61,27 +65,6 @@ if (window.location.href === "https://nicolascoopman.be/projets/tfa/" || window.
   }
 
   window.addEventListener('scroll', updateCounterOnScroll);
-
-// Menu déroulant
-
-window.onload = function() {
-  var toggleTitres = document.querySelectorAll('.toggle-titre');
-  toggleTitres.forEach(function(titre) {
-    titre.addEventListener('click', toggleContenu);
-  });
-};
-
-function toggleContenu() {
-  var contentId = this.getAttribute('id').replace('toggle-titre', 'toggle-contenu');
-  var toggleContenu = document.getElementById(contentId);
-  toggleContenu.classList.toggle('active');
-  this.querySelector('.arrow').classList.toggle('rotate-down');
-
-  toggleContenu.addEventListener('click', function() {
-    toggleContenu.classList.remove('active');
-    titre.querySelector('.arrow').classList.remove('rotate-down');
-  });
-}
 
 // Slider
 const slider = document.querySelector('.slider');
@@ -189,5 +172,3 @@ document.addEventListener('mousemove', (event) => {
   pupille.style.left = `${pupilleX - oeilRect.left}px`;
   pupille.style.top = `${pupilleY - oeilRect.top}px`;
 });
-
-const nodes = document.querySelectorAll('.node');

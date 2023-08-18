@@ -219,6 +219,32 @@ margin-bottom:36px;
 width:70vw
 }
 
+.item_img{
+    width: 10vw;
+    height: 10vw;
+    margin-right: 36px;
+}
+  
+.item {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+grid-column: 1/-1;
+}
+  
+.hover-text {
+    display: none;
+    background-color: var(--color-text-offset);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+  
+  .item:hover .hover-text {
+    display: block;
+  }
+  
+
 @media (min-width: 768px) {
 //Image 
 .introImage-container {
@@ -256,10 +282,14 @@ width:15px
 }
 
 .main-nav_burger {
-margin-left:80%;
+margin-left:70%;
+}
+
+.image-people{
+    width: 35vw;
+}
 }
     
-
 @media (min-width: 860px) {
 .introSection {
 display:grid;
@@ -393,17 +423,20 @@ margin-left:20vw;
 margin-top:5em;
 max-width:60vw
 }
+
+.item {
+    display: flex;
+    align-items: center;
 }
 
 .image-chaise {
     grid-row:2/5 span;
     width: 25vw;
 }
-    
+}
 
 @media (min-width: 1366px) {
 .slider__content {
 padding-left:5vw
-}
 }
 }

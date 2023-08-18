@@ -75,6 +75,34 @@ if (window.location.href === "https://nicolascoopman.be/projets/tfaaout/" || win
       }
   }
 
+  //Oeil
+
+const oeil = document.querySelector('.oeil');
+const pupille = document.querySelector('.pupille');
+
+document.addEventListener('mousemove', (event) => {
+  const oeilRect = oeil.getBoundingClientRect();
+  const oeilCenterX = oeilRect.left + oeilRect.width / 2;
+  const oeilCenterY = oeilRect.top + oeilRect.height / 2;
+
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  const deltaX = mouseX - oeilCenterX;
+  const deltaY = mouseY - oeilCenterY;
+  const angle = Math.atan2(deltaY, deltaX);
+
+  const maxDistance = oeilRect.width * 0.25;
+  const distance = Math.min(maxDistance, Math.hypot(deltaX, deltaY));
+
+  const pupilleX = oeilCenterX + distance * Math.cos(angle);
+  const pupilleY = oeilCenterY + distance * Math.sin(angle);
+
+  pupille.style.left = `${pupilleX - oeilRect.left}px`;
+  pupille.style.top = `${pupilleY - oeilRect.top}px`;
+});
+
+
   window.addEventListener('scroll', updateCounterOnScroll);
 
 // Slider
@@ -147,30 +175,3 @@ let year = new Date().getFullYear();
 let date = document.querySelector("#date");
 date.innerHTML = "©SpikeZ"+ String(year);
 }
-
-//Oeil
-
-const oeil = document.querySelector('.oeil');
-const pupille = document.querySelector('.pupille');
-
-document.addEventListener('mousemove', (event) => {
-  const oeilRect = oeil.getBoundingClientRect();
-  const oeilCenterX = oeilRect.left + oeilRect.width / 2;
-  const oeilCenterY = oeilRect.top + oeilRect.height / 2;
-
-  const mouseX = event.clientX;
-  const mouseY = event.clientY;
-
-  const deltaX = mouseX - oeilCenterX;
-  const deltaY = mouseY - oeilCenterY;
-  const angle = Math.atan2(deltaY, deltaX);
-
-  const maxDistance = oeilRect.width * 0.25;
-  const distance = Math.min(maxDistance, Math.hypot(deltaX, deltaY));
-
-  const pupilleX = oeilCenterX + distance * Math.cos(angle);
-  const pupilleY = oeilCenterY + distance * Math.sin(angle);
-
-  pupille.style.left = `${pupilleX - oeilRect.left}px`;
-  pupille.style.top = `${pupilleY - oeilRect.top}px`;
-});

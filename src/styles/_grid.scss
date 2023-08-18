@@ -94,6 +94,10 @@
   .grid-column2-10 {
   grid-column:1/-1
   }
+
+  .grid-column3-7 {
+    grid-column:1/-1;
+    }
   
   @media (min-width: 768px) {
   .grid-column2-10 {
@@ -123,7 +127,7 @@
   }
   
   .grid-column3-7 {
-  grid-column:3/8
+  grid-column:3/8;
   }
   
   .grid-row5 {
